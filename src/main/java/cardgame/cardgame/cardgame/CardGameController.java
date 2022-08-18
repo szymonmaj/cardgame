@@ -70,10 +70,17 @@ public class CardGameController {
             cardGameActions.mill();
             CardGameActions.setRevDisabled(false);
             CardGameActions.setDisabledOption(false);
+            return "deck";
         }
         if (name.equals("Podejrzyj aktualną kartę")){
+            return "deck";
         }
-        return "deck";
+        if (name.equals("Podejrzyj następną kartę")){
+            return "nextCard";
+        }
+        else {
+            return "deck";
+        }
     }
 
     @PostMapping("/deck")
@@ -104,6 +111,11 @@ public class CardGameController {
             }
         }
         return "shuffle";
+    }
+
+    @PostMapping("/nextCard")
+    public String submitNextCard(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
+        return "nextCard";
     }
 //    @RequestMapping(value = "/shuffle")
 //    public String disable(@RequestParam("second") String second, Model model) {
