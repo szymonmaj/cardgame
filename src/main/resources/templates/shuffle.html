@@ -19,7 +19,7 @@
 
 <div align="center">
 <h2>Shuffle</h2>
-    <input type="text" style="width: 450px;" th:value="${cardGameActions.list3}">
+    <input type="text" style="width: 450px;" th:value="${cardGameActions.getList3}">
     <button><a href="/" class="btn right">Powrót</a></button>
     <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}">
         <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
@@ -30,13 +30,13 @@
 <!--    <button><a href="/deck" class="btn right">Podejrzyj następną kartę</a></button><br/>-->
 <!--    <button><a href="/deck" class="btn right" th:value="${cardGameActions.mill}">Pokaż kartę</a></button><br/>-->
     <label>Ryby:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.a}">
+    <input type="text" th:disabled="true" th:value="${cardGameEnum.getA}">
     <label>Drewno:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.b}">
+    <input type="text" th:disabled="true" th:value="${cardGameEnum.getB}">
     <label>Ruda:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.c}">
+    <input type="text" th:disabled="true" th:value="${cardGameEnum.getC}">
     <label>Komunikat:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.kom}">
+    <input type="text" th:disabled="true" th:value="${cardGameEnum.getKom}">
 </div>
 </body>
 </html>

@@ -7,20 +7,20 @@ import java.util.*;
 //import static cardgame.cardgame.model.CardGameEnum.a;
 
 public class CardGameActions {
-    public List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+    private static List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
-    public static List<String> list3 = new ArrayList<>();
-    public static int n = 0;
-    public static int nn = 0;
-    public static int an = 0;
-    public static String vn = "Z";
-    public static String valueEnum = "One";
-    public static String valueEnumNext = "One";
-    public static Boolean disabled = false;
-    public static Boolean revDisabled = true;
-    public static Boolean disabledOption = false;
-    public static int countEnum = 1;
-    public static int countNextEnum = 1;
+    private static List<String> list3 = new ArrayList<>();
+    private static int n = 0;
+//    public static int nn = 0;
+//    public static int an = 0;
+//    public static String vn = "Z";
+    private static String valueEnum = "One";
+    private static String valueEnumNext = "One";
+    private static Boolean disabled = false;
+    private static Boolean revDisabled = true;
+    private static Boolean disabledOption = false;
+    private static int countEnum = 1;
+    private static int countNextEnum = 1;
 //    public static Map mapOfEnum;
 //    public static Set entries;
 //    public static Iterator moviesIterator;
@@ -38,9 +38,9 @@ public class CardGameActions {
         return list1;
     }
     public void result1(){
-        nn = CardGameEnum.status[countEnum];
-        an = 1;
-        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(nn, an, vn);
+//        nn = CardGameEnum.status[countEnum];
+//        an = 1;
+        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 1, "Z");
         System.out.println(resultEnum);
         System.out.println(CardGameEnum.getA());
 //        takeList();
@@ -48,25 +48,25 @@ public class CardGameActions {
 //        return resultEnum;
     }
     public void result2() {
-        nn = CardGameEnum.status[countEnum];
-        an = 2;
-        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(nn, an, vn);
+//        nn = CardGameEnum.status[countEnum];
+//        an = 2;
+        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 2, "Z");
         System.out.println(resultEnum);
         System.out.println(CardGameEnum.getA());
     }
     public void result3() {
-        nn = CardGameEnum.status[countEnum];
-        an = 3;
-        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(nn, an, vn);
+//        nn = CardGameEnum.status[countEnum];
+//        an = 3;
+        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 3, "Z");
         System.out.println(resultEnum);
         System.out.println(CardGameEnum.getA());
     }
     public String display(String val) {
-        nn = CardGameEnum.status[countEnum];
+//        nn = CardGameEnum.status[countEnum];
         System.out.println(n);
         System.out.println(valueEnum);
         System.out.println(countEnum);
-        String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(nn);
+        String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(CardGameEnum.status[countEnum]);
         String resultEnum3 = null;
         if (val.equals("nazwa")) {
             resultEnum3 = resultEnum2[1];
@@ -115,14 +115,14 @@ public class CardGameActions {
         List<String> list2 = Arrays.asList("One", "Two", "Three");
         Collections.shuffle(list2);
         System.out.println(list2);
-        System.out.println(n);
+//        System.out.println(n);
         System.out.println(valueEnum);
         System.out.println(countEnum);
         list3 = list2;
         return list2;
         }
 
-    public static int counter(){
+    public int counter(){
         n++;
         return n;
     }
@@ -204,7 +204,7 @@ public class CardGameActions {
 //        mapOfEnum.put(countEnum, valueEnum);
     }
 
-    public static Boolean getDisabled() {
+    public Boolean getDisabled() {
         return disabled;
     }
 
@@ -212,7 +212,7 @@ public class CardGameActions {
         CardGameActions.disabled = disabled;
     }
 
-    public static Boolean getRevDisabled() {
+    public Boolean getRevDisabled() {
         return revDisabled;
     }
 
@@ -220,7 +220,7 @@ public class CardGameActions {
         CardGameActions.revDisabled = revDisabled;
     }
 
-    public static Boolean getDisabledOption() {
+    public Boolean getDisabledOption() {
         return disabledOption;
     }
 
@@ -228,9 +228,17 @@ public class CardGameActions {
         CardGameActions.disabledOption = disabledOption;
     }
 
-    public void clearKom() {
-        CardGameEnum.kom = " ";
+    public static List<String> getList3() {
+        return list3;
     }
+
+    public static void setList3(List<String> list3) {
+        CardGameActions.list3 = list3;
+    }
+
+    //    public void clearKom() {
+//        CardGameEnum.kom = " ";
+//    }
 
     }
 

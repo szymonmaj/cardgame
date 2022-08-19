@@ -2,11 +2,11 @@ package cardgame.cardgame.model;
 
 public class CardGameEnum {
     public static int[] point = new int[15];
-    public static int a = 0;
-    public static int b = 0;
-    public static int c = 0;
+    private static int a = 0;
+    private static int b = 0;
+    private static int c = 0;
     public static int[] status = new int[15];
-    public static String kom = " ";
+    private static String kom = " ";
 
     public void setKom(String kom) {
         CardGameEnum.kom = kom;
