@@ -114,10 +114,136 @@ public class CardGameDeckEnum {
                 }
                 return description;
             }
+        },
+        Four {
+            public String[] show(int stat) {
+                description[0] = "karta = 4";
+                description[1] = "Chata drwala";
+                description[2] = String.valueOf(stat);
+                switch (stat) {
+                    case 0:
+                        description[3] = "level = 1";
+                        description[4] = "punkty = 0";
+                        description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        break;
+                    case 2:
+                        description[3] = "level = 2";
+                        description[4] = "punkty = 1";
+                        description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
+                                " kosztem 1 Drewno i 1 Ruda";
+                        break;
+                    case 3:
+                        description[3] = "level = 3";
+                        description[4] = "punkty = 2";
+                        description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
+                                " kosztem 2 Drewno i 2 Ruda";
+                        break;
+                    case 4:
+                        description[3] = "level = 4";
+                        description[4] = "punkty = 5";
+                        description[5] = "BRAK OPCJI";
+                        break;
+                }
+                return description;
+            }
+        },
+        Five {
+            public String[] show(int stat) {
+                description[0] = "karta = 5";
+                description[1] = "Chata drwala";
+                description[2] = String.valueOf(stat);
+                switch (stat) {
+                    case 0:
+                        description[3] = "level = 1";
+                        description[4] = "punkty = 0";
+                        description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        break;
+                    case 2:
+                        description[3] = "level = 2";
+                        description[4] = "punkty = 1";
+                        description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
+                                " kosztem 1 Drewno i 1 Ruda";
+                        break;
+                    case 3:
+                        description[3] = "level = 3";
+                        description[4] = "punkty = 2";
+                        description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
+                                " kosztem 2 Drewno i 2 Ruda";
+                        break;
+                    case 4:
+                        description[3] = "level = 4";
+                        description[4] = "punkty = 5";
+                        description[5] = "BRAK OPCJI";
+                        break;
+                }
+                return description;
+            }
+        },
+        Six {
+            public String[] show(int stat) {
+                description[0] = "karta = 6";
+                description[1] = "Chata drwala";
+                description[2] = String.valueOf(stat);
+                switch (stat) {
+                    case 0:
+                        description[3] = "level = 1";
+                        description[4] = "punkty = 0";
+                        description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        break;
+                    case 2:
+                        description[3] = "level = 2";
+                        description[4] = "punkty = 1";
+                        description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
+                                " kosztem 1 Drewno i 1 Ruda";
+                        break;
+                    case 3:
+                        description[3] = "level = 3";
+                        description[4] = "punkty = 2";
+                        description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
+                                " kosztem 2 Drewno i 2 Ruda";
+                        break;
+                    case 4:
+                        description[3] = "level = 4";
+                        description[4] = "punkty = 5";
+                        description[5] = "BRAK OPCJI";
+                        break;
+                }
+                return description;
+            }
+        },
+        Seven {
+            public String[] show(int stat) {
+                    description[0] = "karta = 7";
+                    description[1] = "Chata drwala";
+                    description[2] = String.valueOf(stat);
+                    switch (stat) {
+                        case 0:
+                            description[3] = "level = 1";
+                            description[4] = "punkty = 0";
+//                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                            description[5] = "Nowa Runda";
+                            break;
+                        case 2:
+                            description[3] = "level = 2";
+                            description[4] = "punkty = 1";
+                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
+                                    " kosztem 1 Drewno i 1 Ruda";
+                            break;
+                        case 3:
+                            description[3] = "level = 3";
+                            description[4] = "punkty = 2";
+                            description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
+                                    " kosztem 2 Drewno i 2 Ruda";
+                            break;
+                        case 4:
+                            description[3] = "level = 4";
+                            description[4] = "punkty = 5";
+                            description[5] = "BRAK OPCJI";
+                            break;
+                    }
+                    return description;
+            }
         };
-//        Four {
-//
-//        };
         public abstract String[] show(int stat);
     }
 }

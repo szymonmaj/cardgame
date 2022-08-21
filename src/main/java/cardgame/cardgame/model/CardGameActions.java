@@ -10,7 +10,10 @@ public class CardGameActions {
     private static List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
     private static List<String> list3 = new ArrayList<>();
+    private static List<String> list4 = new ArrayList<>();
+    private static List<String> list3a = new ArrayList<>();
     private static int n = 0;
+    private static int r = 1;
 //    public static int nn = 0;
 //    public static int an = 0;
 //    public static String vn = "Z";
@@ -41,8 +44,8 @@ public class CardGameActions {
 //        nn = CardGameEnum.status[countEnum];
 //        an = 1;
         int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 1, "Z");
-        System.out.println(resultEnum);
-        System.out.println(CardGameEnum.getA());
+//        System.out.println(resultEnum);
+//        System.out.println(CardGameEnum.getA());
 //        takeList();
 //        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(3, 2, "B");
 //        return resultEnum;
@@ -51,21 +54,21 @@ public class CardGameActions {
 //        nn = CardGameEnum.status[countEnum];
 //        an = 2;
         int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 2, "Z");
-        System.out.println(resultEnum);
-        System.out.println(CardGameEnum.getA());
+//        System.out.println(resultEnum);
+//        System.out.println(CardGameEnum.getA());
     }
     public void result3() {
 //        nn = CardGameEnum.status[countEnum];
 //        an = 3;
         int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 3, "Z");
-        System.out.println(resultEnum);
-        System.out.println(CardGameEnum.getA());
+//        System.out.println(resultEnum);
+//        System.out.println(CardGameEnum.getA());
     }
     public String display(String val) {
 //        nn = CardGameEnum.status[countEnum];
         System.out.println(n);
-        System.out.println(valueEnum);
-        System.out.println(countEnum);
+//        System.out.println(valueEnum);
+//        System.out.println(countEnum);
         String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(CardGameEnum.status[countEnum]);
         String resultEnum3 = null;
         if (val.equals("nazwa")) {
@@ -112,26 +115,37 @@ public class CardGameActions {
     }
 
     public static List<String> shuffleList(){
-        List<String> list2 = Arrays.asList("One", "Two", "Three");
+        List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
         Collections.shuffle(list2);
         System.out.println(list2);
-//        System.out.println(n);
+        System.out.println(n);
         System.out.println(valueEnum);
         System.out.println(countEnum);
         list3 = list2;
+        List<String> list3a = new ArrayList<>(list3);
+        list3a.add("Seven");
+        list4 = list3a;
+        System.out.println(list4);
         return list2;
         }
 
     public int counter(){
         n++;
+        if (n == 6) {
+            n = 0;
+            r++;
+            CardGameEnum cardGameEnum = new CardGameEnum();
+            cardGameEnum.setKom("Runda: " + r);
+        }
         return n;
     }
 
     public void takeList(){
-        valueEnum = list3.get(n);
-        valueEnumNext = list3.get(n + 1);
+        valueEnum = list4.get(n);
+        valueEnumNext = list4.get(n + 1);
         counter();
         System.out.println(valueEnum);
+        System.out.println(valueEnumNext);
         if (valueEnum.equals("One")){
             countEnum = 1;
             countNextEnum = 1;
@@ -234,6 +248,14 @@ public class CardGameActions {
 
     public static void setList3(List<String> list3) {
         CardGameActions.list3 = list3;
+    }
+
+    public static List<String> getList4() {
+        return list4;
+    }
+
+    public static void setList4(List<String> list4) {
+        CardGameActions.list4 = list4;
     }
 
     //    public void clearKom() {

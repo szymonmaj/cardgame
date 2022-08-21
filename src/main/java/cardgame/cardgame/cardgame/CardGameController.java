@@ -85,7 +85,9 @@ public class CardGameController {
 
     @PostMapping("/deck")
     public String submitDeck(@ModelAttribute CardGameActions cardGameActions, @ModelAttribute CardGameEnum cardGameEnum, @RequestParam(required = false) String name) {
-        cardGameEnum.setKom(" ");
+        if (!cardGameEnum.getKom().contains("Runda:")) {
+            cardGameEnum.setKom(" ");
+        }
         if (name.equals("Opcja 1")){
             cardGameActions.result1();
             if (cardGameEnum.getKom().contains("akcja")){

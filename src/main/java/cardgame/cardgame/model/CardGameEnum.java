@@ -98,6 +98,9 @@ public class CardGameEnum {
                             a = a + 2;
                             ++b;
                         }
+                        else {
+                            kom = "Niedozwolona akcja";
+                        }
                         break;
                 }
                 return status[0];
@@ -164,6 +167,9 @@ public class CardGameEnum {
                         if (action == 1) {
                             a = a + 2;
                             ++b;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                 }
@@ -232,6 +238,9 @@ public class CardGameEnum {
                             a = a + 2;
                             ++b;
                         }
+                        else {
+                            kom = "Niedozwolona akcja";
+                        }
                         break;
                 }
                 return status[2];
@@ -239,30 +248,36 @@ public class CardGameEnum {
         },
         Four {
             public int perform(int stat, int action, String val) {
-
                 switch (stat) {
                     case 0:
                         point[3] = 0;
                         if (action == 1) {
                             ++b;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && a > 0 && b > 0) {
                             status[3] = 2;
                             --a;
                             --b;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 2:
                         point[3] = 1;
                         if (action == 1) {
                             ++b;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && b > 0 && c > 0) {
                             status[3] = 3;
                             --b;
                             --c;
+                            break;
                         }
-                        if (a == 0 || b == 0) {
+                        else {
                             kom = "Niedozwolona akcja";
                         }
                         break;
@@ -270,15 +285,23 @@ public class CardGameEnum {
                         point[3] = 2;
                         if (action == 1) {
                             b = b + 2;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && b > 1 && c > 1) {
                             status[3] = 4;
                             b = b - 2;
                             c = c - 2;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 4:
                         point[3] = 5;
+                        if (action == 1 || action == 2 || action == 3) {
+                            kom = "Niedozwolona akcja";
+                        }
                         break;
                 }
                 return status[3];
@@ -291,37 +314,55 @@ public class CardGameEnum {
                         point[4] = 0;
                         if (action == 1) {
                             ++b;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && a > 0 && b > 0) {
                             status[4] = 2;
                             --a;
                             --b;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 2:
                         point[4] = 1;
                         if (action == 1) {
                             ++b;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && b > 0 && c > 0) {
                             status[4] = 3;
                             --b;
                             --c;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 3:
                         point[4] = 2;
                         if (action == 1) {
                             b = b + 2;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && b > 1 && c > 1) {
                             status[4] = 4;
                             b = b - 2;
                             c = c - 2;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 4:
                         point[4] = 5;
+                        if (action == 1 || action == 2 || action == 3) {
+                            kom = "Niedozwolona akcja";
+                        }
                         break;
                 }
                 return status[4];
@@ -334,37 +375,55 @@ public class CardGameEnum {
                         point[5] = 0;
                         if (action == 1) {
                             ++b;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && a > 0 && b > 0) {
                             status[5] = 2;
                             --a;
                             --b;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 2:
                         point[5] = 1;
                         if (action == 1) {
                             ++b;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && b > 0 && c > 0) {
                             status[5] = 3;
                             --b;
                             --c;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 3:
                         point[5] = 2;
                         if (action == 1) {
                             b = b + 2;
+                            break;
                         }
-                        if (action == 2) {
+                        if (action == 2 && b > 1 && c > 1) {
                             status[5] = 4;
                             b = b - 2;
                             c = c - 2;
+                            break;
+                        }
+                        else {
+                            kom = "Niedozwolona akcja";
                         }
                         break;
                     case 4:
                         point[5] = 5;
+                        if (action == 1 || action == 2 || action == 3) {
+                            kom = "Niedozwolona akcja";
+                        }
                         break;
                 }
                 return status[5];
