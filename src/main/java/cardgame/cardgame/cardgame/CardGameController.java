@@ -6,18 +6,26 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 
 @Controller
 public class CardGameController {
     @GetMapping("/")
-    public String showForm(Model model) {
+    public String showForm(Model model, HttpSession session) {
+
+        session.setAttribute("licznik", 0);
         CardGameActions cardGameActions = new CardGameActions();
         model.addAttribute("cardGameActions", cardGameActions);
         return "start";
     }
 
     @GetMapping("/shuffle")
-    public String shuffle(Model model) {
+    public String shuffle(Model model, HttpSession session) {
+        Integer licznik = (Integer) session.getAttribute("licznik");
+        System.out.println(licznik);
+        licznik++;
+        session.setAttribute("licznik", licznik);
         CardGameActions cardGameActions = new CardGameActions();
         CardGameEnum cardGameEnum = new CardGameEnum();
         model.addAttribute("cardGameActions", cardGameActions);

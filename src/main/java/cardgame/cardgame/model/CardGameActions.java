@@ -141,6 +141,7 @@ public class CardGameActions {
     }
 
     public void takeList(){
+        System.out.println("takie likst" + this);
         valueEnum = list4.get(n);
         valueEnumNext = list4.get(n + 1);
         counter();
@@ -262,6 +263,11 @@ public class CardGameActions {
 //        CardGameEnum.kom = " ";
 //    }
 
+
+    public CardGameActions() {
+        System.out.println("dupa");
+        System.out.println(this);
     }
+}
 
 
