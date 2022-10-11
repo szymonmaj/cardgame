@@ -22,8 +22,8 @@ public class CardGameActions {
     private static Boolean disabled = false;
     private static Boolean revDisabled = true;
     private static Boolean disabledOption = false;
-    private static int countEnum = 1;
-    private static int countNextEnum = 1;
+    private static int countEnum = 0;
+    private static int countNextEnum = 0;
 //    public static Map mapOfEnum;
 //    public static Set entries;
 //    public static Iterator moviesIterator;
@@ -115,7 +115,8 @@ public class CardGameActions {
     }
 
     public static List<String> shuffleList(){
-        List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six");
+        List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+                "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
         Collections.shuffle(list2);
         System.out.println(list2);
         System.out.println(n);
@@ -123,7 +124,7 @@ public class CardGameActions {
         System.out.println(countEnum);
         list3 = list2;
         List<String> list3a = new ArrayList<>(list3);
-        list3a.add("Seven");
+        list3a.add("Seventeen");
         list4 = list3a;
         System.out.println(list4);
         return list2;
@@ -131,7 +132,7 @@ public class CardGameActions {
 
     public int counter(){
         n++;
-        if (n == 6) {
+        if (n == 16) {
             n = 0;
             r++;
             CardGameEnum cardGameEnum = new CardGameEnum();
@@ -148,68 +149,68 @@ public class CardGameActions {
         System.out.println(valueEnum);
         System.out.println(valueEnumNext);
         if (valueEnum.equals("One")){
+            countEnum = 0;
+            countNextEnum = 0;
+        }
+        if (valueEnum.equals("Two")){
             countEnum = 1;
             countNextEnum = 1;
         }
-        if (valueEnum.equals("Two")){
+        if (valueEnum.equals("Three")){
             countEnum = 2;
             countNextEnum = 2;
         }
-        if (valueEnum.equals("Three")){
+        if (valueEnum.equals("Four")){
             countEnum = 3;
             countNextEnum = 3;
         }
-        if (valueEnum.equals("Four")){
+        if (valueEnum.equals("Five")){
             countEnum = 4;
             countNextEnum = 4;
         }
-        if (valueEnum.equals("Five")){
+        if (valueEnum.equals("Six")){
             countEnum = 5;
             countNextEnum = 5;
         }
-        if (valueEnum.equals("Six")){
+        if (valueEnum.equals("Seven")){
             countEnum = 6;
             countNextEnum = 6;
         }
-        if (valueEnum.equals("Seven")){
+        if (valueEnum.equals("Eight")){
             countEnum = 7;
             countNextEnum = 7;
         }
-        if (valueEnum.equals("Eight")){
+        if (valueEnum.equals("Nine")){
             countEnum = 8;
             countNextEnum = 8;
         }
-        if (valueEnum.equals("Nine")){
+        if (valueEnum.equals("Ten")){
             countEnum = 9;
             countNextEnum = 9;
         }
-        if (valueEnum.equals("Ten")){
+        if (valueEnum.equals("Eleven")){
             countEnum = 10;
             countNextEnum = 10;
         }
-        if (valueEnum.equals("Eleven")){
+        if (valueEnum.equals("Twelve")){
             countEnum = 11;
             countNextEnum = 11;
         }
-        if (valueEnum.equals("Twelve")){
+        if (valueEnum.equals("Thirteen")){
             countEnum = 12;
             countNextEnum = 12;
         }
-        if (valueEnum.equals("Thirteen")){
+        if (valueEnum.equals("Fourteen")){
             countEnum = 13;
             countNextEnum = 13;
         }
-        if (valueEnum.equals("Fourteen")){
+        if (valueEnum.equals("Fifteen")){
             countEnum = 14;
             countNextEnum = 14;
         }
-        if (valueEnum.equals("Fifteen")){
+        if (valueEnum.equals("Sixteen")){
             countEnum = 15;
             countNextEnum = 15;
-        }
-        if (valueEnum.equals("Sixteen")){
-            countEnum = 16;
-            countNextEnum = 16;
         }
 //        Map<Integer, String> mapOfEnum = new HashMap<Integer, String>();
 //        Set<Map.Entry<Integer, String>> entries = mapOfEnum.entrySet();
