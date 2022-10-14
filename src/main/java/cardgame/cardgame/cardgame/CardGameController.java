@@ -96,13 +96,43 @@ public class CardGameController {
         if (!cardGameEnum.getKom().contains("Runda:")) {
             cardGameEnum.setKom(" ");
         }
-        if (name.equals("Opcja 1")){
-            cardGameActions.result1();
-            if (cardGameEnum.getKom().contains("akcja")){
+        if (name.equals("Opcja 1") || name.equals("A") || name.equals("B") || name.equals("C")){
+            if (name.equals("A")){
+                cardGameActions.result1("A");
+                if (cardGameEnum.getKom().contains("akcja")){
+                }
+                else {
+                    CardGameActions.setDisabledOption(true);
+                }
             }
-            else {
-                CardGameActions.setDisabledOption(true);
+            if (name.equals("B")){
+                cardGameActions.result1("B");
+                if (cardGameEnum.getKom().contains("akcja")){
+                }
+                else {
+                    CardGameActions.setDisabledOption(true);
+                }
             }
+            if (name.equals("C")){
+                cardGameActions.result1("C");
+                if (cardGameEnum.getKom().contains("akcja")){
+                }
+                else {
+                    CardGameActions.setDisabledOption(true);
+                }
+            }
+            if (name.equals("Opcja 1")) {
+                cardGameActions.result1("Z");
+                if (cardGameEnum.getKom().contains("akcja")) {
+                } else {
+                    CardGameActions.setDisabledOption(true);
+                }
+            }
+//            if (cardGameEnum.getKom().contains("akcja")){
+//            }
+//            else {
+//                CardGameActions.setDisabledOption(true);
+//            }
         }
         if (name.equals("Opcja 2")){
             cardGameActions.result2();

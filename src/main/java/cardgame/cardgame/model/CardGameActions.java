@@ -4,6 +4,8 @@ import org.springframework.lang.NonNull;
 
 import java.util.*;
 
+import static cardgame.cardgame.model.CardGameEnum.val;
+
 //import static cardgame.cardgame.model.CardGameEnum.a;
 
 public class CardGameActions {
@@ -40,10 +42,10 @@ public class CardGameActions {
         System.out.println(CardGameEnum.point[3]);
         return list1;
     }
-    public void result1(){
+    public void result1(String val){
 //        nn = CardGameEnum.status[countEnum];
 //        an = 1;
-        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 1, "Z");
+        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 1, val);
 //        System.out.println(resultEnum);
 //        System.out.println(CardGameEnum.getA());
 //        takeList();

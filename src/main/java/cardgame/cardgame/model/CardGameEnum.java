@@ -7,7 +7,7 @@ public class CardGameEnum {
     private static int c = 0;
     public static int[] status = new int[16];
     private static String kom = " ";
-
+    public static String val = "Z";
     public void setKom(String kom) {
         CardGameEnum.kom = kom;
     }
@@ -16,6 +16,12 @@ public class CardGameEnum {
         return kom;
     }
 
+    public static String getVal() {
+        return val;
+    }
+    public static void setVal(String val) {
+        CardGameEnum.val = val;
+    }
     public static int getA() {
         return a;
     }
@@ -633,10 +639,12 @@ public class CardGameEnum {
                             if (val.contains("A") && a > 0) {
                                 --a;
                                 ++c;
+                                break;
                             }
                             if (val.contains("B") && b > 0) {
                                 --b;
                                 ++c;
+                                break;
                             }
                             else {
                                 kom = "Niedozwolona akcja";
@@ -701,18 +709,21 @@ public class CardGameEnum {
                                 ++a;
                                 ++b;
                                 ++c;
+                                break;
                             }
                             if (val.contains("B") && b > 0){
                                 --b;
                                 ++a;
                                 ++b;
                                 ++c;
+                                break;
                             }
                             if (val.contains("C") && c > 0){
                                 --c;
                                 ++a;
                                 ++b;
                                 ++c;
+                                break;
                             }
                             else {
                                 kom = "Niedozwolona akcja";
@@ -737,11 +748,13 @@ public class CardGameEnum {
                                 a = a - 2;
                                 ++a;
                                 ++b;
+                                break;
                             }
                             if (val.contains("B") && b > 1) {
                                 b = b - 2;
                                 ++a;
                                 ++b;
+                                break;
                             }
                             else {
                                 kom = "Niedozwolona akcja";
@@ -768,10 +781,12 @@ public class CardGameEnum {
                             if (val.contains("A") && a > 1) {
                                 a = a - 2;
                                 b = b + 3;
+                                break;
                             }
                             if (val.contains("C") && c > 1) {
                                 c = c - 2;
                                 b = b + 3;
+                                break;
                             }
                             else {
                                 kom = "Niedozwolona akcja";
@@ -794,10 +809,12 @@ public class CardGameEnum {
                             if (val.contains("B") && b > 1) {
                                 b = b - 2;
                                 a = a + 3;
+                                break;
                             }
                             if (val.contains("C") && c > 1){
                                 c = c - 2;
                                 a = a + 3;
+                                break;
                             }
                             else {
                                 kom = "Niedozwolona akcja";
@@ -820,10 +837,12 @@ public class CardGameEnum {
                             if (val.contains("A") && a > 1){
                                 a = a - 2;
                                 c = c + 3;
+                                break;
                             }
                             if (val.contains("B") && b > 1){
                                 b = b - 2;
                                 c = c + 3;
+                                break;
                             }
                             else {
                                 kom = "Niedozwolona akcja";
