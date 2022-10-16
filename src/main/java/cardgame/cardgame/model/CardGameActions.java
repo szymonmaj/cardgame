@@ -4,6 +4,8 @@ import org.springframework.lang.NonNull;
 
 import java.util.*;
 
+
+//import static cardgame.cardgame.model.CardGameEnum.point;
 import static cardgame.cardgame.model.CardGameEnum.val;
 
 //import static cardgame.cardgame.model.CardGameEnum.a;
@@ -26,6 +28,7 @@ public class CardGameActions {
     private static Boolean disabledOption = false;
     private static int countEnum = 0;
     private static int countNextEnum = 0;
+    private int sumpoint = 0;
 //    public static Map mapOfEnum;
 //    public static Set entries;
 //    public static Iterator moviesIterator;
@@ -220,6 +223,15 @@ public class CardGameActions {
 //        Map.Entry<Integer, String> entry = moviesIterator.next();
 //        entry.getKey();
 //        mapOfEnum.put(countEnum, valueEnum);
+    }
+
+    public int sumPoints() {
+//        for (int value : CardGameEnum.point) {
+//            sumpoint += value;
+//        }
+//        sumpoint = point[0] + point[1] + point[2] + point[3] + point[4] + point[5] + point[6] + point[7] + point[8] + point[9] + point[10] + point[11] + point[12] + point[13] + point[14] + point[15];
+        sumpoint = Arrays.stream(CardGameEnum.point).sum();
+        return sumpoint;
     }
 
     public Boolean getDisabled() {

@@ -36,7 +36,8 @@
     <label>Ruda:</label>
     <input type="text" th:disabled="true" th:value="${cardGameEnum.getC}">
     <label>Komunikat:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.getKom}">
+    <input type="text" th:disabled="true" th:value="${cardGameEnum.getKom}"><br/><br/>
+    <span>Suma punktów: </span><span th:text="${cardGameActions.sumPoints}"></span>
 </div>
 </body>
 </html>
