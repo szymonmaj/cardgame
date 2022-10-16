@@ -12,7 +12,7 @@ public class CardGameEnum {
     public static int[] status = new int[16];
     private static String kom = " ";
     public static String val = "Z";
-    public void setKom(String kom) {
+    public static void setKom(String kom) {
         CardGameEnum.kom = kom;
     }
 
