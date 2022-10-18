@@ -51,7 +51,7 @@ public class CardGameEnum {
                 switch (stat) {
                     case 0:
                         point[0] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 4) {
                             ++a;
                             break;
                         }
@@ -71,7 +71,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[0] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 3) {
                             a = a + 2;
                             break;
                         }
@@ -87,7 +87,7 @@ public class CardGameEnum {
                         break;
                     case 3:
                         point[0] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 4 && b < 4) {
                             ++a;
                             ++b;
                             break;
@@ -104,7 +104,7 @@ public class CardGameEnum {
                         break;
                     case 4:
                         point[0] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 3 && b < 4) {
                             a = a + 2;
                             ++b;
                             break;
@@ -122,7 +122,7 @@ public class CardGameEnum {
                 switch (stat) {
                     case 0:
                         point[1] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 4) {
                             ++a;
                             break;
                         }
@@ -142,7 +142,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[1] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 3) {
                             a = a + 2;
                             break;
                         }
@@ -158,7 +158,7 @@ public class CardGameEnum {
                         break;
                     case 3:
                         point[1] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 4 && b < 4) {
                             ++a;
                             ++b;
                             break;
@@ -175,7 +175,7 @@ public class CardGameEnum {
                         break;
                     case 4:
                         point[1] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 3 && b < 4) {
                             a = a + 2;
                             ++b;
                             break;
@@ -193,7 +193,7 @@ public class CardGameEnum {
                 switch (stat) {
                     case 0:
                         point[2] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 4) {
                             ++a;
                             break;
                         }
@@ -213,7 +213,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[2] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 3) {
                             a = a + 2;
                             break;
                         }
@@ -229,7 +229,7 @@ public class CardGameEnum {
                         break;
                     case 3:
                         point[2] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 4 && b < 4) {
                             ++a;
                             ++b;
                             break;
@@ -246,7 +246,7 @@ public class CardGameEnum {
                         break;
                     case 4:
                         point[2] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 3 && b < 4) {
                             a = a + 2;
                             ++b;
                             break;
@@ -263,7 +263,7 @@ public class CardGameEnum {
             public int perform(int stat, int action, String val) {
                 switch (stat) {
                     case 0:
-                        if (action == 1) {
+                        if (action == 1 && b < 4) {
                             ++b;
                             break;
                         }
@@ -279,7 +279,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 2:
-                        if (action == 1) {
+                        if (action == 1 && b < 4) {
                             ++b;
                             break;
                         }
@@ -295,7 +295,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 3:
-                        if (action == 1) {
+                        if (action == 1 && b < 43) {
                             b = b + 2;
                             break;
                         }
@@ -324,7 +324,7 @@ public class CardGameEnum {
             public int perform(int stat, int action, String val) {
                 switch (stat) {
                     case 0:
-                        if (action == 1) {
+                        if (action == 1 && b < 4) {
                             ++b;
                             break;
                         }
@@ -340,7 +340,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 2:
-                        if (action == 1) {
+                        if (action == 1 && b < 4) {
                             ++b;
                             break;
                         }
@@ -356,7 +356,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 3:
-                        if (action == 1) {
+                        if (action == 1 && b < 3) {
                             b = b + 2;
                             break;
                         }
@@ -385,7 +385,7 @@ public class CardGameEnum {
             public int perform(int stat, int action, String val) {
                 switch (stat) {
                     case 0:
-                        if (action == 1) {
+                        if (action == 1 && b < 4) {
                             ++b;
                             break;
                         }
@@ -401,7 +401,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 2:
-                        if (action == 1) {
+                        if (action == 1 && b < 4) {
                             ++b;
                             break;
                         }
@@ -417,7 +417,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 3:
-                        if (action == 1) {
+                        if (action == 1 && b < 3) {
                             b = b + 2;
                             break;
                         }
@@ -463,7 +463,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[6] = 0;
-                        if (action == 1) {
+                        if (action == 1 && c < 4) {
                             ++c;
                             break;
                         }
@@ -478,7 +478,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 3:
-                        if (action == 1) {
+                        if (action == 1 && c < 4) {
                             ++c;
                             break;
                         }
@@ -495,7 +495,7 @@ public class CardGameEnum {
                         break;
                     case 4:
                         point[6] = 2;
-                        if (action == 1 && c > 1) {
+                        if (action == 1 && c < 3) {
                             c = c + 2;
                             break;
                         }
@@ -528,7 +528,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[7] = 0;
-                        if (action == 1) {
+                        if (action == 1 && c < 4) {
                             ++c;
                             break;
                         }
@@ -560,7 +560,7 @@ public class CardGameEnum {
                         break;
                     case 4:
                         point[7] = 2;
-                        if (action == 1 && c > 1) {
+                        if (action == 1 && c < 3) {
                             c = c + 2;
                             break;
                         }
@@ -593,7 +593,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[8] = 0;
-                        if (action == 1) {
+                        if (action == 1 && c < 4) {
                             ++c;
                             break;
                         }
@@ -608,7 +608,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 3:
-                        if (action == 1) {
+                        if (action == 1 && c < 4) {
                             ++c;
                             break;
                         }
@@ -625,7 +625,7 @@ public class CardGameEnum {
                         break;
                     case 4:
                         point[8] = 2;
-                        if (action == 1 && c > 1) {
+                        if (action == 1 && c < 3) {
                             c = c + 2;
                             break;
                         }
@@ -643,12 +643,12 @@ public class CardGameEnum {
                     case 0:
                         point[9] = 0;
                         if (action == 1) {
-                            if (val.contains("A") && a > 0) {
+                            if (val.contains("A") && a > 0 && c < 4) {
                                 --a;
                                 ++c;
                                 break;
                             }
-                            if (val.contains("B") && b > 0) {
+                            if (val.contains("B") && b > 0 && c < 4) {
                                 --b;
                                 ++c;
                                 break;
@@ -674,7 +674,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[9] = 0;
-                        if (action == 1 && b > 0) {
+                        if (action == 1 && b > 0 && a < 4 && c < 4) {
                             --b;
                             ++a;
                             ++c;
@@ -692,7 +692,7 @@ public class CardGameEnum {
                         break;
                     case 3:
                         point[9] = 0;
-                        if (action == 1 && a > 0) {
+                        if (action == 1 && a > 0 && b < 4 && c < 4) {
                             --a;
                             ++b;
                             ++c;
@@ -711,21 +711,21 @@ public class CardGameEnum {
                     case 4:
                         point[9] = 0;
                         if (action == 1) {
-                            if (val.contains("A") && a > 0){
+                            if (val.contains("A") && a > 0 && a < 4 && b < 4 && c < 4){
                                 --a;
                                 ++a;
                                 ++b;
                                 ++c;
                                 break;
                             }
-                            if (val.contains("B") && b > 0){
+                            if (val.contains("B") && b > 0 && a < 4 && b < 4 && c < 4){
                                 --b;
                                 ++a;
                                 ++b;
                                 ++c;
                                 break;
                             }
-                            if (val.contains("C") && c > 0){
+                            if (val.contains("C") && c > 0 && a < 4 && b < 4 && c < 4){
                                 --c;
                                 ++a;
                                 ++b;
@@ -751,13 +751,13 @@ public class CardGameEnum {
                     case 0:
                         point[10] = 0;
                         if (action == 1) {
-                            if (val.contains("A") && a > 1) {
+                            if (val.contains("A") && a > 1 && a < 4 && b < 4) {
                                 a = a - 2;
                                 ++a;
                                 ++b;
                                 break;
                             }
-                            if (val.contains("B") && b > 1) {
+                            if (val.contains("B") && b > 1 && a < 4 && b < 4) {
                                 b = b - 2;
                                 ++a;
                                 ++b;
@@ -785,12 +785,12 @@ public class CardGameEnum {
                     case 2:
                         point[10] = 0;
                         if (action == 1) {
-                            if (val.contains("A") && a > 1) {
+                            if (val.contains("A") && a > 1 && b < 2) {
                                 a = a - 2;
                                 b = b + 3;
                                 break;
                             }
-                            if (val.contains("C") && c > 1) {
+                            if (val.contains("C") && c > 1 && b < 2) {
                                 c = c - 2;
                                 b = b + 3;
                                 break;
@@ -813,12 +813,12 @@ public class CardGameEnum {
                     case 3:
                         point[10] = 0;
                         if (action == 1) {
-                            if (val.contains("B") && b > 1) {
+                            if (val.contains("B") && b > 1 && a < 2) {
                                 b = b - 2;
                                 a = a + 3;
                                 break;
                             }
-                            if (val.contains("C") && c > 1){
+                            if (val.contains("C") && c > 1 && a < 2){
                                 c = c - 2;
                                 a = a + 3;
                                 break;
@@ -841,12 +841,12 @@ public class CardGameEnum {
                     case 4:
                         point[10] = 0;
                         if (action == 1) {
-                            if (val.contains("A") && a > 1){
+                            if (val.contains("A") && a > 1 && c < 2){
                                 a = a - 2;
                                 c = c + 3;
                                 break;
                             }
-                            if (val.contains("B") && b > 1){
+                            if (val.contains("B") && b > 1 && c < 2){
                                 b = b - 2;
                                 c = c + 3;
                                 break;
@@ -898,7 +898,7 @@ public class CardGameEnum {
                         break;
                     case 2:
                         point[11] = 0;
-                        if (action == 1) {
+                        if (action == 1 && a < 4 && b < 4) {
                             ++a;
                             ++b;
                             break;
@@ -915,7 +915,7 @@ public class CardGameEnum {
                         }
                         break;
                     case 3:
-                        if (action == 1) {
+                        if (action == 1 && a < 4 && b < 4 && c < 4) {
                             ++a;
                             ++b;
                             ++c;

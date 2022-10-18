@@ -144,7 +144,7 @@ public class CardGameActions {
             CardGameEnum cardGameEnum = new CardGameEnum();
             cardGameEnum.setKom("Runda: " + r);
         }
-        if (r == 2) {
+        if (r == 9) {
             CardGameEnum cardGameEnum = new CardGameEnum();
             setRevDisabled(true);
             setFinalDisabled(true);
