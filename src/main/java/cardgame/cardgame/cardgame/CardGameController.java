@@ -78,12 +78,25 @@ public class CardGameController {
             cardGameActions.mill();
             CardGameActions.setRevDisabled(false);
             CardGameActions.setDisabledOption(false);
+            if (CardGameActions.getN() != 0) {
+                CardGameEnum.setKom(" ");
+            }
             return "deck";
         }
         if (name.equals("Podejrzyj aktualną kartę")){
+            if (!CardGameEnum.getKom().contains("Koniec")) {
+                if (CardGameActions.getN() != 0 || !CardGameEnum.getKom().contains("Runda")) {
+                CardGameEnum.setKom(" ");
+                }
+            }
             return "deck";
         }
         if (name.equals("Podejrzyj następną kartę")){
+            if (!CardGameEnum.getKom().contains("Koniec")) {
+                if (CardGameActions.getN() != 0 || !CardGameEnum.getKom().contains("Runda")) {
+                    CardGameEnum.setKom(" ");
+                }
+            }
             return "nextCard";
         }
         else {

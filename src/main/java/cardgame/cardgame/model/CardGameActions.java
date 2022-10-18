@@ -26,6 +26,7 @@ public class CardGameActions {
     private static Boolean disabled = false;
     private static Boolean revDisabled = true;
     private static Boolean disabledOption = false;
+    private static Boolean finalDisabled = false;
     private static int countEnum = 0;
     private static int countNextEnum = 0;
     private int sumpoint = 0;
@@ -143,6 +144,12 @@ public class CardGameActions {
             CardGameEnum cardGameEnum = new CardGameEnum();
             cardGameEnum.setKom("Runda: " + r);
         }
+        if (r == 2) {
+            CardGameEnum cardGameEnum = new CardGameEnum();
+            setRevDisabled(true);
+            setFinalDisabled(true);
+            cardGameEnum.setKom("Koniec gry, Twoje punkty: " + sumPoints());
+        }
         return n;
     }
 
@@ -258,6 +265,14 @@ public class CardGameActions {
         CardGameActions.disabledOption = disabledOption;
     }
 
+    public static Boolean getFinalDisabled() {
+        return finalDisabled;
+    }
+
+    public static void setFinalDisabled(Boolean finalDisabled) {
+        CardGameActions.finalDisabled = finalDisabled;
+    }
+
     public static List<String> getList3() {
         return list3;
     }
@@ -272,6 +287,22 @@ public class CardGameActions {
 
     public static void setList4(List<String> list4) {
         CardGameActions.list4 = list4;
+    }
+
+    public static int getN() {
+        return n;
+    }
+
+    public static void setN(int n) {
+        CardGameActions.n = n;
+    }
+
+    public static int getR() {
+        return r;
+    }
+
+    public static void setR(int r) {
+        CardGameActions.r = r;
     }
 
     //    public void clearKom() {

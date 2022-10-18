@@ -21,7 +21,7 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 1";
                 description[1] = "Chata rybaka";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
+//                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -55,7 +55,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 2";
                 description[1] = "Chata rybaka";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -89,7 +88,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 3";
                 description[1] = "Chata rybaka";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -123,7 +121,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 4";
                 description[1] = "Chata drwala";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -156,7 +153,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 5";
                 description[1] = "Chata drwala";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -189,7 +185,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 6";
                 description[1] = "Chata drwala";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -222,7 +217,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 7";
                 description[1] = "Kamieniołom";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -255,7 +249,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 8";
                 description[1] = "Kamieniołom";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -288,7 +281,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 9";
                 description[1] = "Kamieniołom";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -321,7 +313,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 10";
                 description[1] = "Targ";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -353,7 +344,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 11";
                 description[1] = "Chatka kupca";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -384,7 +374,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 12";
                 description[1] = "Warsztat";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -415,7 +404,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 13";
                 description[1] = "Chatka mieszkalna";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -446,7 +434,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 14";
                 description[1] = "Chatka mieszkalna";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -477,7 +464,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 15";
                 description[1] = "Świątynia";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -508,7 +494,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 16";
                 description[1] = "Świątynia";
                 description[2] = String.valueOf(stat);
-                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -536,34 +521,37 @@ public class CardGameDeckEnum {
         },
         Seventeen {
             public String[] show(int stat) {
-                    description[0] = "karta = 7";
-                    description[1] = "Chata drwala";
-                    description[2] = String.valueOf(stat);
-                    switch (stat) {
-                        case 0:
-                            description[3] = "level = 1";
-                            description[4] = "punkty = 0";
-//                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
-                            description[5] = "Nowa Runda";
-                            break;
-                        case 2:
-                            description[3] = "level = 2";
-                            description[4] = "punkty = 1";
-                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
-                                    " kosztem 1 Drewno i 1 Ruda";
-                            break;
-                        case 3:
-                            description[3] = "level = 3";
-                            description[4] = "punkty = 2";
-                            description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
-                                    " kosztem 2 Drewno i 2 Ruda";
-                            break;
-                        case 4:
-                            description[3] = "level = 4";
-                            description[4] = "punkty = 5";
-                            description[5] = "BRAK OPCJI";
-                            break;
-                    }
+                    description[0] = "";
+                    description[1] = "";
+                    description[2] = "";
+                    description[3] = "";
+                    description[4] = "";
+                    description[5] = "Nowa Runda";
+//                    switch (stat) {
+//                        case 0:
+//                            description[3] = "";
+//                            description[4] = "";
+////                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+//                            description[5] = "Nowa Runda";
+//                            break;
+////                        case 2:
+////                            description[3] = "level = 2";
+////                            description[4] = "punkty = 1";
+////                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
+////                                    " kosztem 1 Drewno i 1 Ruda";
+////                            break;
+////                        case 3:
+////                            description[3] = "level = 3";
+////                            description[4] = "punkty = 2";
+////                            description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
+////                                    " kosztem 2 Drewno i 2 Ruda";
+////                            break;
+////                        case 4:
+////                            description[3] = "level = 4";
+////                            description[4] = "punkty = 5";
+////                            description[5] = "BRAK OPCJI";
+////                            break;
+//                    }
                     return description;
             }
         };

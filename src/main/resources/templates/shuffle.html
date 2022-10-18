@@ -23,7 +23,7 @@
     <button><a href="/" class="btn right">Powrót</a></button>
     <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}">
         <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
-        <input type="submit" value="Pokaż kartę" name="name"/><br/>
+        <input type="submit" th:disabled="${cardGameActions.finalDisabled}" value="Pokaż kartę" name="name"/><br/>
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj aktualną kartę" name="name"/><br/>
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
     </form>

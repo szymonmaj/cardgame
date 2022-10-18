@@ -16,7 +16,7 @@ public class CardGameEnum {
         CardGameEnum.kom = kom;
     }
 
-    public String getKom() {
+    public static String getKom() {
         return kom;
     }
 
@@ -107,6 +107,7 @@ public class CardGameEnum {
                         if (action == 1) {
                             a = a + 2;
                             ++b;
+                            break;
                         }
                         else {
                             kom = "Niedozwolona akcja";
@@ -177,6 +178,7 @@ public class CardGameEnum {
                         if (action == 1) {
                             a = a + 2;
                             ++b;
+                            break;
                         }
                         else {
                             kom = "Niedozwolona akcja";
@@ -247,6 +249,7 @@ public class CardGameEnum {
                         if (action == 1) {
                             a = a + 2;
                             ++b;
+                            break;
                         }
                         else {
                             kom = "Niedozwolona akcja";
