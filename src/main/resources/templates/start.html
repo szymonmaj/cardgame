@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
     <script type="text/javascript" th:src="@{/js/action.js}"></script>
 </head>
 <body>
@@ -18,13 +18,13 @@
 <!--<span>Drewno: </span><span th:text="${cardGameActions.result1}"></span><br/>-->
 <form action="#" th:action="@{/}" method="post" th:object="${cardGameActions}" id = "myform">
 
-<input type="submit" th:disabled="${cardGameActions.disabled}" value="Losuj" name="name"/><br/>
+<input type="submit" class="btn" th:disabled="${cardGameActions.disabled}" value="Losuj" name="name"/><br/>
 <!--    <div th:switch="${disableSecondButton}">-->
 <!--        <textarea rows = "20" cols = "80" th:text = "${cardGameActions.shuffleList}" th:case="'true'" form = "myform" name="second"> </textarea>-->
 <!--        <textarea rows = "20" cols = "80" th:text = "${cardGameActions.list2}" th:case="*" form = "myform" name="second"> </textarea>-->
 <!--    </div>-->
 </form>
-<button><a href="/shuffle" class="btn right">Podejrzyj</a></button><br/>
+<button class="btn"><a href="/shuffle">Podejrzyj</a></button><br/>
 
 </body>
 </html>

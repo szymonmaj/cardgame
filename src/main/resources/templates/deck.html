@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
     <script type="text/javascript" th:src="@{/js/action.js}"></script>
 </head>
 <body>
@@ -25,7 +25,7 @@
     <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/>
     <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/>
 </form>
-<button><a href="/shuffle" class="btn right">Powrót</a></button>
+<button class="btn"><a href="/shuffle">Powrót</a></button>
 </body>
 </html>
 <!--th:onclick="|loadContent('${cardGameActions.result1}')|"-->

@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
     <script type="text/javascript" th:src="@{/js/action.js}"></script>
 </head>
 <body>
@@ -16,6 +16,6 @@
 <span>Poziom: </span><span th:text="${cardGameActions.displayNext('poziom')}"></span><br/>
 <span>Punkty: </span><span th:text="${cardGameActions.displayNext('punkty')}"></span><br/>
 <span>Opis: </span><span th:text="${cardGameActions.displayNext('opis')}"></span><br/>
-<button><a href="/shuffle" class="btn right">Powrót</a></button>
+<button class="btn"><a href="/shuffle">Powrót</a></button>
 </body>
 </html>

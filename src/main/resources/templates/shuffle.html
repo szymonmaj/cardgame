@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/style.css" />
     <script type="text/javascript" th:src="@{/js/action.js}"></script>
 </head>
 <body>
@@ -20,7 +20,7 @@
 <div align="center">
 <h2>Shuffle</h2>
     <input type="text" style="width: 700px;" th:value="${cardGameActions.getList4}">
-    <button><a href="/" class="btn right">Powrót</a></button>
+    <button class="btn"><a href="/">Powrót</a></button>
     <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}">
         <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
         <input type="submit" th:disabled="${cardGameActions.finalDisabled}" value="Pokaż kartę" name="name"/><br/>
@@ -30,13 +30,17 @@
 <!--    <button><a href="/deck" class="btn right">Podejrzyj następną kartę</a></button><br/>-->
 <!--    <button><a href="/deck" class="btn right" th:value="${cardGameActions.mill}">Pokaż kartę</a></button><br/>-->
     <label>Ryby:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.getA}">
+    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getA}">
     <label>Drewno:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.getB}">
+    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getB}">
     <label>Ruda:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.getC}">
-    <label>Komunikat:</label>
-    <input type="text" th:disabled="true" th:value="${cardGameEnum.getKom}"><br/><br/>
+    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getC}"><br/><br/>
+<!--    <label>Komunikat:</label>-->
+<!--    <input type="text" th:disabled="true" th:value="${cardGameEnum.getKom}">-->
+    <span>Komunikat: </span>
+    <div class="statement">
+        <span th:text="${cardGameEnum.getKom}"></span>
+    </div><br/><br/>
     <span>Suma punktów: </span><span th:text="${cardGameActions.sumPoints}"></span>
 </div>
 </body>
