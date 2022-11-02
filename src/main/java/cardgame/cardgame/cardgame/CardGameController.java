@@ -59,6 +59,7 @@ public class CardGameController {
             cardGameActions.mill();
             CardGameActions.setRevDisabled(false);
             CardGameActions.setDisabledOption(false);
+            CardGameActions.setVisibleDisabled(true);
             if (CardGameActions.getN() != 0) {
                 CardGameEnum.setKom(" ");
             }

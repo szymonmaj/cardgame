@@ -15,6 +15,7 @@ public class CardGameActions {
     private static Boolean revDisabled = true;
     private static Boolean disabledOption = false;
     private static Boolean finalDisabled = false;
+    private static Boolean visibleDisabled = false;
     private static int countEnum = 0;
     private static int countNextEnum = 0;
     private int sumpoint = 0;
@@ -219,6 +220,12 @@ public class CardGameActions {
 
     public static void setFinalDisabled(Boolean finalDisabled) {
         CardGameActions.finalDisabled = finalDisabled;
+    }
+
+    public static Boolean getVisibleDisabled() {return visibleDisabled;}
+
+    public static void setVisibleDisabled(Boolean visibleDisabled) {
+        CardGameActions.visibleDisabled = visibleDisabled;
     }
 
     public static List<String> getBaseList() {

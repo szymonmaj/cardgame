@@ -19,7 +19,12 @@
 
 <div align="center">
 <h2>Shuffle</h2>
-    <input type="text" style="width: 750px;" th:value="${cardGameActions.getBaseList}">
+    <div th:if="${cardGameActions.visibleDisabled}">
+        <input type="hidden" style="width: 750px;" th:value="${cardGameActions.getBaseList}">
+    </div>
+    <div th:unless="${cardGameActions.visibleDisabled}">
+        <input type="text" style="width: 750px;" th:value="${cardGameActions.getBaseList}">
+    </div>
     <button class="btn"><a href="/">Powrót</a></button>
     <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}">
         <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
