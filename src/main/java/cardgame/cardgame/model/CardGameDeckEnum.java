@@ -4,16 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CardGameDeckEnum {
-
-//    public static String desc;
-//    public static String name;
-//    public static int pageNumber;
-//    public static int pointDeck;
-//    public static int level;
     public static int status;
     public static String[] description = new String[6];
-
-
 
     public enum Deck{
         One {
@@ -21,7 +13,6 @@ public class CardGameDeckEnum {
                 description[0] = "karta = 1";
                 description[1] = "Chata rybaka";
                 description[2] = String.valueOf(stat);
-//                cardgame.cardgame.model.CardGameEnum.setKom(" ");
                 switch (stat) {
                     case 0:
                         description[3] = "level = 1";
@@ -527,31 +518,6 @@ public class CardGameDeckEnum {
                     description[3] = "";
                     description[4] = "";
                     description[5] = "Nowa Runda";
-//                    switch (stat) {
-//                        case 0:
-//                            description[3] = "";
-//                            description[4] = "";
-////                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
-//                            description[5] = "Nowa Runda";
-//                            break;
-////                        case 2:
-////                            description[3] = "level = 2";
-////                            description[4] = "punkty = 1";
-////                            description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
-////                                    " kosztem 1 Drewno i 1 Ruda";
-////                            break;
-////                        case 3:
-////                            description[3] = "level = 3";
-////                            description[4] = "punkty = 2";
-////                            description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
-////                                    " kosztem 2 Drewno i 2 Ruda";
-////                            break;
-////                        case 4:
-////                            description[3] = "level = 4";
-////                            description[4] = "punkty = 5";
-////                            description[5] = "BRAK OPCJI";
-////                            break;
-//                    }
                     return description;
             }
         };

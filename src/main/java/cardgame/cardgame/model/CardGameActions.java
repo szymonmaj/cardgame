@@ -1,26 +1,14 @@
 package cardgame.cardgame.model;
 
 import org.springframework.lang.NonNull;
-
 import java.util.*;
 
-
-//import static cardgame.cardgame.model.CardGameEnum.point;
-import static cardgame.cardgame.model.CardGameEnum.val;
-
-//import static cardgame.cardgame.model.CardGameEnum.a;
-
 public class CardGameActions {
-    private static List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+    private static List<String> baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
-    private static List<String> list3 = new ArrayList<>();
-    private static List<String> list4 = new ArrayList<>();
-    private static List<String> list3a = new ArrayList<>();
+    private static List<String> auxList = new ArrayList<>();
     private static int n = 0;
     private static int r = 1;
-//    public static int nn = 0;
-//    public static int an = 0;
-//    public static String vn = "Z";
     private static String valueEnum = "One";
     private static String valueEnumNext = "One";
     private static Boolean disabled = false;
@@ -30,51 +18,19 @@ public class CardGameActions {
     private static int countEnum = 0;
     private static int countNextEnum = 0;
     private int sumpoint = 0;
-//    public static Map mapOfEnum;
-//    public static Set entries;
-//    public static Iterator moviesIterator;
 
     @NonNull
-    public static List<String> randomList(){
-        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16);
-        List<String> list1 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
-                "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
-        Collections.shuffle(list1);
-        Collections.shuffle(list);
-        System.out.println(list1);
-        System.out.println("Wynik:" + CardGameEnum.Cards.Four.perform(3, 2, "B"));
-        System.out.println(CardGameEnum.point[3]);
-        return list1;
-    }
     public void result1(String val){
-//        nn = CardGameEnum.status[countEnum];
-//        an = 1;
         int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 1, val);
-//        System.out.println(resultEnum);
-//        System.out.println(CardGameEnum.getA());
-//        takeList();
-//        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(3, 2, "B");
-//        return resultEnum;
     }
     public void result2() {
-//        nn = CardGameEnum.status[countEnum];
-//        an = 2;
         int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 2, "Z");
-//        System.out.println(resultEnum);
-//        System.out.println(CardGameEnum.getA());
     }
     public void result3() {
-//        nn = CardGameEnum.status[countEnum];
-//        an = 3;
         int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 3, "Z");
-//        System.out.println(resultEnum);
-//        System.out.println(CardGameEnum.getA());
     }
     public String display(String val) {
-//        nn = CardGameEnum.status[countEnum];
         System.out.println(n);
-//        System.out.println(valueEnum);
-//        System.out.println(countEnum);
         String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(CardGameEnum.status[countEnum]);
         String resultEnum3 = null;
         if (val.equals("nazwa")) {
@@ -121,19 +77,15 @@ public class CardGameActions {
     }
 
     public static List<String> shuffleList(){
-        List<String> list2 = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
-                "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
-        Collections.shuffle(list2);
-        System.out.println(list2);
+        Collections.shuffle(baseList);
+        System.out.println(baseList);
         System.out.println(n);
         System.out.println(valueEnum);
         System.out.println(countEnum);
-        list3 = list2;
-        List<String> list3a = new ArrayList<>(list3);
-        list3a.add("Seventeen");
-        list4 = list3a;
-        System.out.println(list4);
-        return list2;
+        auxList = new ArrayList<>(baseList);
+        auxList.add("Seventeen");
+        baseList = auxList;
+        return baseList;
         }
 
     public int counter(){
@@ -155,8 +107,8 @@ public class CardGameActions {
 
     public void takeList(){
         System.out.println("takie likst" + this);
-        valueEnum = list4.get(n);
-        valueEnumNext = list4.get(n + 1);
+        valueEnum = baseList.get(n);
+        valueEnumNext = baseList.get(n + 1);
         counter();
         System.out.println(valueEnum);
         System.out.println(valueEnumNext);
@@ -233,10 +185,6 @@ public class CardGameActions {
     }
 
     public int sumPoints() {
-//        for (int value : CardGameEnum.point) {
-//            sumpoint += value;
-//        }
-//        sumpoint = point[0] + point[1] + point[2] + point[3] + point[4] + point[5] + point[6] + point[7] + point[8] + point[9] + point[10] + point[11] + point[12] + point[13] + point[14] + point[15];
         sumpoint = Arrays.stream(CardGameEnum.point).sum();
         return sumpoint;
     }
@@ -273,20 +221,12 @@ public class CardGameActions {
         CardGameActions.finalDisabled = finalDisabled;
     }
 
-    public static List<String> getList3() {
-        return list3;
+    public static List<String> getBaseList() {
+        return baseList;
     }
 
-    public static void setList3(List<String> list3) {
-        CardGameActions.list3 = list3;
-    }
-
-    public static List<String> getList4() {
-        return list4;
-    }
-
-    public static void setList4(List<String> list4) {
-        CardGameActions.list4 = list4;
+    public static void setBaseList(List<String> baseList) {
+        CardGameActions.baseList = baseList;
     }
 
     public static int getN() {
@@ -304,11 +244,6 @@ public class CardGameActions {
     public static void setR(int r) {
         CardGameActions.r = r;
     }
-
-    //    public void clearKom() {
-//        CardGameEnum.kom = " ";
-//    }
-
 
     public CardGameActions() {
         System.out.println("dupa");

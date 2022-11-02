@@ -42,22 +42,6 @@ public class CardGameController {
         return "deck";
     }
 
-//    @GetMapping("/shuffle")
-//    @RequestMapping(value = "/shuffle")
-//    public String shuffle(@RequestParam("second") String second, Model model) {
-//        CardGameActions cardGameActions = new CardGameActions();
-//        model.addAttribute("cardGameActions", cardGameActions);
-//        model.addAttribute("disableSecondButton", true);
-//
-//        return "shuffle";
-//    }
-//    public String disable(@RequestParam("second") String second, Model model) {
-//        CardGameActions cardGameActions = new CardGameActions();
-//        model.addAttribute("disableSecondButton", true);
-//
-//        return "shuffle";
-//    }
-
     @PostMapping("/")
     public String submitForm(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
         System.out.println(cardGameActions);
@@ -71,9 +55,6 @@ public class CardGameController {
 
     @PostMapping("/shuffle")
     public String submitShuffle(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
-//        System.out.println(cardGameActions);
-//        CardGameActions.shuffleList();
-//        CardGameActions.setDisabled(true);
         if (name.equals("Pokaż kartę")){
             cardGameActions.mill();
             CardGameActions.setRevDisabled(false);
@@ -141,11 +122,6 @@ public class CardGameController {
                     CardGameActions.setDisabledOption(true);
                 }
             }
-//            if (cardGameEnum.getKom().contains("akcja")){
-//            }
-//            else {
-//                CardGameActions.setDisabledOption(true);
-//            }
         }
         if (name.equals("Opcja 2")){
             cardGameActions.result2();
@@ -170,11 +146,4 @@ public class CardGameController {
     public String submitNextCard(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
         return "nextCard";
     }
-//    @RequestMapping(value = "/shuffle")
-//    public String disable(@RequestParam("second") String second, Model model) {
-//        CardGameActions cardGameActions = new CardGameActions();
-//        model.addAttribute("disableSecondButton", true);
-//
-//        return "start";
-//    }
 }
