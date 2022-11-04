@@ -2,6 +2,7 @@ package cardgame.cardgame.cardgame;
 
 import cardgame.cardgame.model.CardGameActions;
 import cardgame.cardgame.model.CardGameEnum;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -10,12 +11,13 @@ import javax.servlet.http.HttpSession;
 
 
 @Controller
+@AllArgsConstructor
 public class CardGameController {
+    CardGameActions cardGameActions;
+    CardGameEnum cardGameEnum;
     @GetMapping("/")
     public String showForm(Model model, HttpSession session) {
-
         session.setAttribute("licznik", 0);
-        CardGameActions cardGameActions = new CardGameActions();
         model.addAttribute("cardGameActions", cardGameActions);
         return "start";
     }
@@ -26,8 +28,6 @@ public class CardGameController {
         System.out.println(licznik);
         licznik++;
         session.setAttribute("licznik", licznik);
-        CardGameActions cardGameActions = new CardGameActions();
-        CardGameEnum cardGameEnum = new CardGameEnum();
         model.addAttribute("cardGameActions", cardGameActions);
         model.addAttribute("cardGameEnum", cardGameEnum);
         return "shuffle";
@@ -35,8 +35,6 @@ public class CardGameController {
 
     @GetMapping("/deck")
     public String deck(Model model) {
-        CardGameActions cardGameActions = new CardGameActions();
-        CardGameEnum cardGameEnum = new CardGameEnum();
         model.addAttribute("cardGameActions", cardGameActions);
         model.addAttribute("cardGameEnum", cardGameEnum);
         return "deck";
@@ -44,8 +42,6 @@ public class CardGameController {
 
     @PostMapping("/")
     public String submitForm(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
-        System.out.println(cardGameActions);
-
         if (name.equals("Losuj")){
             CardGameActions.shuffleList();
             CardGameActions.setDisabled(true);

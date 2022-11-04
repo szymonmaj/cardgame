@@ -1,7 +1,9 @@
 package cardgame.cardgame.model;
 
-import java.util.stream.IntStream;
+import org.springframework.stereotype.Repository;
 
+import java.util.stream.IntStream;
+@Repository
 public class CardGameEnum {
 //    public static int[] point = IntStream.range(0, 16).toArray();
 //{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}

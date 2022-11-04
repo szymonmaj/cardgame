@@ -1,9 +1,13 @@
 package cardgame.cardgame.model;
 
 import org.springframework.lang.NonNull;
+import org.springframework.stereotype.Repository;
+
 import java.util.*;
 
+@Repository
 public class CardGameActions {
+
     private static List<String> baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
     private static List<String> auxList = new ArrayList<>();
@@ -31,7 +35,6 @@ public class CardGameActions {
         int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 3, "Z");
     }
     public String display(String val) {
-        System.out.println(n);
         String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(CardGameEnum.status[countEnum]);
         String resultEnum3 = null;
         if (val.equals("nazwa")) {
@@ -79,10 +82,6 @@ public class CardGameActions {
 
     public static List<String> shuffleList(){
         Collections.shuffle(baseList);
-        System.out.println(baseList);
-        System.out.println(n);
-        System.out.println(valueEnum);
-        System.out.println(countEnum);
         auxList = new ArrayList<>(baseList);
         auxList.add("Seventeen");
         baseList = auxList;
@@ -111,8 +110,6 @@ public class CardGameActions {
         valueEnum = baseList.get(n);
         valueEnumNext = baseList.get(n + 1);
         counter();
-        System.out.println(valueEnum);
-        System.out.println(valueEnumNext);
         if (valueEnum.equals("One")){
             countEnum = 0;
             countNextEnum = 0;
