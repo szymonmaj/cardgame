@@ -33,6 +33,7 @@
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
     </form>
     <label>Ryby:</label>
+    <a href="/"><img src="/gfx/fish.png" id="head-logo" class="left"></a>
     <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getA}">
     <label>Drewno:</label>
     <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getB}">
