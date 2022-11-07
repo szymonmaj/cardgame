@@ -1,6 +1,10 @@
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <style>
-
+img {
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  padding: 5px;
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -32,12 +36,11 @@
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj aktualną kartę" name="name"/><br/>
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
     </form>
-    <label>Ryby:</label>
-    <a href="/"><img src="/gfx/fish.png" id="head-logo" class="left"></a>
+    <img src="/gfx/fish.png" style="width:45px">
     <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getA}">
-    <label>Drewno:</label>
+    <img src="/gfx/wood.jpg" style="width:45px">
     <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getB}">
-    <label>Ruda:</label>
+    <img src="/gfx/ore.png" style="width:45px">
     <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getC}"><br/><br/>
     <span>Komunikat: </span>
     <div class="statement">
