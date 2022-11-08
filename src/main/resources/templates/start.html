@@ -1,7 +1,44 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <style>
-
+img {
+  background-color: white;
+  clear: both;
+  padding: 30px 60px 60px 60px;
+  border-radius: 30px;
+  box-shadow: 0px 0px 15px #e9e4e0;
+  border: 1px solid #e3e3e3;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+span.center {
+        font-size: 120%;
+        color: #DC143C;
+        display: flex;
+        justify-content: center
+}
+.btn-cntr {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  padding: 10px 20px;
+  width: auto;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 100%;
+  color: #fff;
+  background-color: #0065e9;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.big-center {
+        font-size: 150%;
+        font-weight: bold;
+        color: #DC143C;
+        display: flex;
+        justify-content: center
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -10,10 +47,17 @@
     <script type="text/javascript" th:src="@{/js/action.js}"></script>
 </head>
 <body>
-<h2>Game</h2>
+<span class="big-center">GRA</span><br/>
 <form action="#" th:action="@{/}" method="post" th:object="${cardGameActions}" id = "myform">
-    <input type="submit" class="btn" th:disabled="${cardGameActions.disabled}" value="Losuj" name="name"/><br/>
+    <input type="submit" class="btn-cntr" th:disabled="${cardGameActions.disabled}" value="Losuj" name="name"/><br/>
 </form>
-<button class="btn"><a href="/shuffle">Podejrzyj</a></button><br/>
+<button class="btn-cntr"><a href="/shuffle">Podejrzyj</a></button><br/><br/><br/>
+<span class="center">INSTRUKCJA</span><br/>
+<span class="center">Pokaż kartę - przejdź do nastepnej karty </span><br/>
+<span class="center">Podejrzyj aktualną kartę - przejdź do wybranej karty, jeżeli wybrałeś prawidłową opcję, możliwość wyboru pozostaje zablokowana </span><br/>
+<span class="center">Podejrzyj następną kartę - sprawdź co Cię czeka na kolejnej karcie </span><br/>
+<span class="center">Komunikat - informacje dotyczące Twoich wyborów oraz przebiegu rozgywki </span><br/>
+<span class="center">Suma punktów - ilość punktów, które zdobyłeś do tego momentu </span><br/>
+<img src="/gfx/manual1.PNG" style="width:550px">
 </body>
 </html>

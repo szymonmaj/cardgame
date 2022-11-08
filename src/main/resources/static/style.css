@@ -9,11 +9,11 @@ body {
 
 /* STRUCTURE */
 
-.image {
-  border: 1px solid #ddd;
-  border-radius: 40px;
-  padding: 5px;
+#head-msg {
+  margin: 30px 0;
+  padding: 12px 30px;
 }
+
 
 /* TEXT */
 
@@ -39,6 +39,25 @@ body {
   color: #fff;
   background-color: #0065e9;
 }
+.btn-cntr {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  padding: 10px 20px;
+  width: auto;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 100%;
+  color: #fff;
+  background-color: #0065e9;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .left {
   float: left;
+}
+span.center {
+        font-size: 130%;
+        color: #DC143C;
+        text-align: center;
 }
