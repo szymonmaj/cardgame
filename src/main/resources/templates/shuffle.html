@@ -22,7 +22,7 @@ img {
 </form>
 
 <div align="center">
-<h2>Shuffle</h2>
+<h2>WYBÓR</h2>
     <div th:if="${cardGameActions.visibleDisabled}">
         <input type="hidden" style="width: 750px;" th:value="${cardGameActions.getBaseList}">
     </div>
@@ -37,11 +37,14 @@ img {
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
     </form>
     <img src="/gfx/fish.png" style="width:45px">
-    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getA}">
+<!--    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getA}">-->
+    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getA}"></span>
     <img src="/gfx/wood.jpg" style="width:45px">
-    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getB}">
+<!--    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getB}">-->
+    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getB}"></span>
     <img src="/gfx/ore.png" style="width:45px">
-    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getC}"><br/><br/>
+<!--    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getC}">-->
+    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getC}"></span><br/><br/>
     <span>Komunikat: </span>
     <div class="statement">
         <span th:text="${cardGameEnum.getKom}"></span>

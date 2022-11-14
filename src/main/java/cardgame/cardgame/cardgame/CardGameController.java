@@ -45,6 +45,7 @@ public class CardGameController {
         if (name.equals("Losuj")){
             CardGameActions.shuffleList();
             CardGameActions.setDisabled(true);
+            CardGameActions.setFinalDisabled(false);
         }
         return "start";
     }

@@ -18,7 +18,7 @@ public class CardGameActions {
     private static Boolean disabled = false;
     private static Boolean revDisabled = true;
     private static Boolean disabledOption = false;
-    private static Boolean finalDisabled = false;
+    private static Boolean finalDisabled = true;
     private static Boolean visibleDisabled = false;
     private static int countEnum = 0;
     private static int countNextEnum = 0;
