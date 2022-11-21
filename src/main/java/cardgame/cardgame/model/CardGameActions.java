@@ -249,6 +249,10 @@ public class CardGameActions {
         CardGameActions.r = r;
     }
 
+    public static String getValueEnum() {
+        return valueEnum;
+    }
+
     public CardGameActions() {
         System.out.println("dupa");
         System.out.println(this);

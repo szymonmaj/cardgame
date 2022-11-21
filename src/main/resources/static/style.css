@@ -6,6 +6,10 @@
 body {
   background-color: #ebebeb;
 }
+h1, h2, h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 180%;
+}
 
 /* STRUCTURE */
 
@@ -60,4 +64,10 @@ span.center {
         font-size: 130%;
         color: #DC143C;
         text-align: center;
+}
+span.desc {
+        font-size: 130%;
+        font-family: 'Roboto Slab', sans-serif;
+        text-decoration-line: underline;
+
 }

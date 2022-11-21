@@ -10,21 +10,37 @@
     <script type="text/javascript" th:src="@{/js/action.js}"></script>
 </head>
 <body>
+<div align="center">
 <h2>KARTA</h2>
-<span>Numer karty: </span><span th:text="${cardGameActions.display('numer')}"></span><br/>
-<span>Nazwa: </span><span th:text="${cardGameActions.display('nazwa')}"></span><br/>
-<span>Poziom: </span><span th:text="${cardGameActions.display('poziom')}"></span><br/>
-<span>Punkty: </span><span th:text="${cardGameActions.display('punkty')}"></span><br/>
-<span>Opis: </span><span th:text="${cardGameActions.display('opis')}"></span><br/>
+<span class="desc">Numer karty: </span><span th:text="${cardGameActions.display('numer')}"></span><br/>
+<span class="desc">Nazwa: </span><span th:text="${cardGameActions.display('nazwa')}"></span><br/>
+<span class="desc">Poziom: </span><span th:text="${cardGameActions.display('poziom')}"></span><br/>
+<span class="desc">Punkty: </span><span th:text="${cardGameActions.display('punkty')}"></span><br/><br/>
+<span class="desc">Opis: </span><span th:text="${cardGameActions.display('opis')}"></span><br/><br/>
 <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
 <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
     <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 1" name="name"/><br/>
-    <span>Ryba: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
-    <span>Drewno: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
-    <span>Ruda: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/><br/>
-    <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/>
-    <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/>
+    <div th:switch="${cardGameActions.valueEnum}">
+        <p th:case="'Ten'">
+            <span class="desc">Ryba: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
+            <span class="desc">Drewno: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
+            <span class="desc">Ruda: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/><br/>
+        </p>
+        <p th:case="'Eleven'">
+            <span class="desc">Ryba: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
+            <span class="desc">Drewno: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
+            <span class="desc">Ruda: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/><br/>
+        </p>
+        <p th:case="*">
+            <span class="desc" hidden>Ryba: </span><input type="hidden" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
+            <span class="desc" hidden>Drewno: </span><input type="hidden" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
+            <span class="desc" hidden>Ruda: </span><input type="hidden" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/>
+        </p>
+    </div>
+    <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/><br/>
+    <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/><br/>
 </form>
 <button class="btn"><a href="/shuffle">Powrót</a></button>
+</div>
 </body>
 </html>
