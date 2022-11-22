@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CardGameDeckEnum {
     public static int status;
-    public static String[] description = new String[6];
+    public static String[] description = new String[9];
 
     public enum Deck{
         One {
@@ -19,23 +19,35 @@ public class CardGameDeckEnum {
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba lub OPCJA 2: Awansuj na poziom 2, by zyskać 2 Ryba kosztem 1 Ryba" +
                                 " lub OPCJA 3: Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba";
+                        description[6] = "Zdobądź 1 Ryba";
+                        description[7] = "Awansuj na poziom 2, by zyskać 2 Ryba kosztem 1 Ryba";
+                        description[8] = "Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 2 Ryba lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno" +
                                 " kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 2 Ryba";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno" +
                                 " kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Ryba i 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 2 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 2 Ryba i 1 Drewno";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -52,23 +64,35 @@ public class CardGameDeckEnum {
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba lub OPCJA 2: Awansuj na poziom 2, by zyskać 2 Ryba kosztem 1 Ryba" +
                                 " lub OPCJA 3: Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba";
+                        description[6] = "Zdobądź 1 Ryba";
+                        description[7] = "Awansuj na poziom 2, by zyskać 2 Ryba kosztem 1 Ryba";
+                        description[8] = "Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 2 Ryba lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno" +
                                 " kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 2 Ryba";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno" +
                                 " kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Ryba i 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 2 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 2 Ryba i 1 Drewno";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -85,23 +109,35 @@ public class CardGameDeckEnum {
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba lub OPCJA 2: Awansuj na poziom 2, by zyskać 2 Ryba kosztem 1 Ryba" +
                                 " lub OPCJA 3: Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba";
+                        description[6] = "Zdobądź 1 Ryba";
+                        description[7] = "Awansuj na poziom 2, by zyskać 2 Ryba kosztem 1 Ryba";
+                        description[8] = "Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 2 Ryba lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno" +
                                 " kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 2 Ryba";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno" +
                                 " kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Ryba i 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 2 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 2 Ryba i 1 Drewno";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -117,23 +153,35 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  1";
                         description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
                                 " kosztem 1 Drewno i 1 Ruda";
+                        description[6] = "Zdobądź 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Drewno kosztem 1 Drewno i 1 Ruda";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  2";
                         description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
                                 " kosztem 2 Drewno i 2 Ruda";
+                        description[6] = "Zdobądź 2 Drewno";
+                        description[7] = "Awansuj na poziom 4 kosztem 2 Drewno i 2 Ruda";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  5";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -149,23 +197,35 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  1";
                         description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
                                 " kosztem 1 Drewno i 1 Ruda";
+                        description[6] = "Zdobądź 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Drewno kosztem 1 Drewno i 1 Ruda";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  2";
                         description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
                                 " kosztem 2 Drewno i 2 Ruda";
+                        description[6] = "Zdobądź 2 Drewno";
+                        description[7] = "Awansuj na poziom 4 kosztem 2 Drewno i 2 Ruda";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  5";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -181,23 +241,35 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  1";
                         description[5] = "OPCJA 1: Zdobądź 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Drewno" +
                                 " kosztem 1 Drewno i 1 Ruda";
+                        description[6] = "Zdobądź 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Drewno kosztem 1 Drewno i 1 Ruda";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  2";
                         description[5] = "OPCJA 1: Zdobądź 2 Drewno lub OPCJA 2: Awansuj na poziom 4" +
                                 " kosztem 2 Drewno i 2 Ruda";
+                        description[6] = "Zdobądź 2 Drewno";
+                        description[7] = "Awansuj na poziom 4 kosztem 2 Drewno i 2 Ruda";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  5";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -213,23 +285,35 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Ryba";
+                        description[6] = "Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Ryba";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ruda" +
                                 " kosztem 1 Ryba i 2 Drewno";
+                        description[6] = "Zdobądź 1 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ruda kosztem 1 Ryba i 2 Drewno";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ruda" +
                                 " kosztem 2 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ruda kosztem 2 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  2";
                         description[5] = "OPCJA 1: Zdobądź 2 Ruda";
+                        description[6] = "Zdobądź 2 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -245,23 +329,35 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Ryba";
+                        description[6] = "Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Ryba";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ruda" +
                                 " kosztem 1 Ryba i 2 Drewno";
+                        description[6] = "Zdobądź 1 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ruda kosztem 1 Ryba i 2 Drewno";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ruda" +
                                 " kosztem 2 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ruda kosztem 2 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  2";
                         description[5] = "OPCJA 1: Zdobądź 2 Ruda";
+                        description[6] = "Zdobądź 2 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -277,23 +373,35 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Ryba";
+                        description[6] = "Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 1 Ruda kosztem 2 Ryba";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ruda" +
                                 " kosztem 1 Ryba i 2 Drewno";
+                        description[6] = "Zdobądź 1 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ruda kosztem 1 Ryba i 2 Drewno";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 2 Ruda" +
                                 " kosztem 2 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 1 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 2 Ruda kosztem 2 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  2";
                         description[5] = "OPCJA 1: Zdobądź 2 Ruda";
+                        description[6] = "Zdobądź 2 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -309,22 +417,34 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ruda kosztem 1 Ryba/1 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 1 Ryba i 1 Ruda kosztem 2 Drewno lub OPCJA 3: Awansuj na poziom 2, by zyskać 1 Drewno i 1 Ruda kosztem 2 Ryba";
+                        description[6] = "Zdobądź 1 Ruda kosztem 1 Ryba/1 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 1 Ryba i 1 Ruda kosztem 2 Drewno";
+                        description[8] = "Awansuj na poziom 2, by zyskać 1 Drewno i 1 Ruda kosztem 2 Ryba";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Ruda kosztem 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 1 Ryba i 1 Drewno 1 Ruda" +
                                 " kosztem 1 Drewno i 1 Ruda";
+                        description[6] = "Zdobądź 1 Ryba i 1 Ruda kosztem 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 1 Ryba i 1 Drewno 1 Ruda kosztem 1 Drewno i 1 Ruda";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Drewno i 1 Ruda kosztem 1 Ryba lub OPCJA 2: Awansuj na poziom 3, by zyskać 1 Ryba i 1 Drewno i 1 Ruda kosztem 1 Ryba i 1 Ruda";
+                        description[6] = "Zdobądź 1 Drewno i 1 Ruda kosztem 1 Ryba";
+                        description[7] = "Awansuj na poziom 3, by zyskać 1 Ryba i 1 Drewno i 1 Ruda kosztem 1 Ryba i 1 Ruda";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Drewno 1 Ruda kosztem 1 Ryba/1 Drewno/1 Ruda";
+                        description[6] = "Zdobądź 1 Ryba i 1 Drewno 1 Ruda kosztem 1 Ryba/1 Drewno/1 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -340,21 +460,33 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Drewno kosztem 2 Ryba/2 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 3 Drewno kosztem 1 Ryba lub OPCJA 3: Awansuj na poziom 2, by zyskać 3 Ryba kosztem 1 Drewno";
+                        description[6] = "Zdobądź 1 Ryba i 1 Drewno kosztem 2 Ryba/2 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 3 Drewno kosztem 1 Ryba";
+                        description[8] = "Awansuj na poziom 2, by zyskać 3 Ryba kosztem 1 Drewno";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 3 Drewno kosztem 2 Ryba/2 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 3 Ruda kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 3 Drewno kosztem 2 Ryba/2 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 3 Ruda kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 3 Ryba kosztem 2 Drewno/2 Ruda lub OPCJA 2: Awansuj na poziom 3, by zyskać 3 Ruda kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Zdobądź 3 Ryba kosztem 2 Drewno/2 Ruda";
+                        description[7] = "Awansuj na poziom 3, by zyskać 3 Ruda kosztem 1 Ryba i 1 Drewno";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  3";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 3 Ruda kosztem 2 Ryba/2 Drewno lub OPCJA 2: Awansuj na poziom 2, by zyskać 3 Drewno kosztem 1 Ruda lub Opcja 3: Awansuj na poziom 2, by zyskać 3 Ryba kosztem 1 Ruda";
+                        description[6] = "Zdobądź 3 Ruda kosztem 2 Ryba/2 Drewno";
+                        description[7] = "Awansuj na poziom 2, by zyskać 3 Drewno kosztem 1 Ruda";
+                        description[8] = "Awansuj na poziom 2, by zyskać 3 Ryba kosztem 1 Ruda";
                         break;
                 }
                 return description;
@@ -370,21 +502,33 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno lub OPCJA 2: Awansuj na poziom 4 kosztem 1 Ryba i 1 Drewno i 2 Ruda";
+                        description[6] = "Awansuj na poziom 2, by zyskać 1 Ryba i 1 Drewno kosztem 1 Ryba i 1 Drewno";
+                        description[7] = "Awansuj na poziom 4 kosztem 1 Ryba i 1 Drewno i 2 Ruda";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Drewno lub OPCJA 2: Awansuj na poziom 3, by zyskać 1 Ryba i 1 Drewno i 1 Ruda kosztem 1 Ryba i 1 Drewno i 1 Ruda";
+                        description[6] = "Zdobądź 1 Ryba i 1 Drewno";
+                        description[7] = "Awansuj na poziom 3, by zyskać 1 Ryba i 1 Drewno i 1 Ruda kosztem 1 Ryba i 1 Drewno i 1 Ruda";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Zdobądź 1 Ryba i 1 Drewno i 1 Ruda lub OPCJA 2: Awansuj na poziom 4 kosztem 2 Ryba i 2 Drewno i 2 Ruda";
+                        description[6] = "Zdobądź 1 Ryba i 1 Drewno i 1 Ruda";
+                        description[7] = "Awansuj na poziom 4 kosztem 2 Ryba i 2 Drewno i 2 Ruda";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  4";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -400,21 +544,33 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  1";
                         description[5] = "OPCJA 1: Awansuj na poziom 3 kosztem 1 Ryba i 1 Drewno i 1 Ruda";
+                        description[6] = "Awansuj na poziom 3 kosztem 1 Ryba i 1 Drewno i 1 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  3";
                         description[5] = "OPCJA 1: Awansuj na poziom 4 kosztem 2 Ryba i 2 Drewno i 2 Ruda";
+                        description[6] = "Awansuj na poziom 4 kosztem 2 Ryba i 2 Drewno i 2 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  6";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -430,21 +586,33 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno";
+                        description[6] = "Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  1";
                         description[5] = "OPCJA 1: Awansuj na poziom 3 kosztem 1 Ryba i 1 Drewno i 1 Ruda";
+                        description[6] = "Awansuj na poziom 3 kosztem 1 Ryba i 1 Drewno i 1 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  3";
                         description[5] = "OPCJA 1: Awansuj na poziom 4 kosztem 2 Ryba i 2 Drewno i 2 Ruda";
+                        description[6] = "Awansuj na poziom 4 kosztem 2 Ryba i 2 Drewno i 2 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  6";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -460,21 +628,33 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno i 2 Ruda";
+                        description[6] = "Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno i 2 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  3";
                         description[5] = "OPCJA 1: Awansuj na poziom 3 kosztem 2 Ryba i 2 Drewno i 3 Ruda";
+                        description[6] = "Awansuj na poziom 3 kosztem 2 Ryba i 2 Drewno i 3 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  6";
                         description[5] = "OPCJA 1: Awansuj na poziom 4 kosztem 3 Ryba i 3 Drewno i 4 Ruda";
+                        description[6] = "Awansuj na poziom 4 kosztem 3 Ryba i 3 Drewno i 4 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  10";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -490,21 +670,33 @@ public class CardGameDeckEnum {
                         description[3] = "  1";
                         description[4] = "  0";
                         description[5] = "OPCJA 1: Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno i 2 Ruda";
+                        description[6] = "Awansuj na poziom 2 kosztem 1 Ryba i 1 Drewno i 2 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 2:
                         description[3] = "  2";
                         description[4] = "  3";
                         description[5] = "OPCJA 1: Awansuj na poziom 3 kosztem 2 Ryba i 2 Drewno i 3 Ruda";
+                        description[6] = "Awansuj na poziom 3 kosztem 2 Ryba i 2 Drewno i 3 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 3:
                         description[3] = "  3";
                         description[4] = "  6";
                         description[5] = "OPCJA 1: Awansuj na poziom 4 kosztem 3 Ryba i 3 Drewno i 4 Ruda";
+                        description[6] = "Awansuj na poziom 4 kosztem 3 Ryba i 3 Drewno i 4 Ruda";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                     case 4:
                         description[3] = "  4";
                         description[4] = "  10";
                         description[5] = "BRAK OPCJI";
+                        description[6] = "BRAK OPCJI";
+                        description[7] = " ";
+                        description[8] = " ";
                         break;
                 }
                 return description;
@@ -518,6 +710,9 @@ public class CardGameDeckEnum {
                     description[3] = "";
                     description[4] = "";
                     description[5] = "Nowa Runda";
+                    description[6] = "";
+                    description[7] = "";
+                    description[8] = "";
                     return description;
             }
         };

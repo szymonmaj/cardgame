@@ -49,8 +49,14 @@ public class CardGameActions {
         if (val.equals("punkty")) {
             resultEnum3 = resultEnum2[4];
         }
-        if (val.equals("opis")) {
-            resultEnum3 = resultEnum2[5];
+        if (val.equals("opcja1")) {
+            resultEnum3 = resultEnum2[6];
+        }
+        if (val.equals("opcja2")) {
+            resultEnum3 = resultEnum2[7];
+        }
+        if (val.equals("opcja3")) {
+            resultEnum3 = resultEnum2[8];
         }
         return resultEnum3;
     }
@@ -112,66 +118,98 @@ public class CardGameActions {
         counter();
         if (valueEnum.equals("One")){
             countEnum = 0;
-            countNextEnum = 0;
         }
         if (valueEnum.equals("Two")){
             countEnum = 1;
-            countNextEnum = 1;
         }
         if (valueEnum.equals("Three")){
             countEnum = 2;
-            countNextEnum = 2;
         }
         if (valueEnum.equals("Four")){
             countEnum = 3;
-            countNextEnum = 3;
         }
         if (valueEnum.equals("Five")){
             countEnum = 4;
-            countNextEnum = 4;
         }
         if (valueEnum.equals("Six")){
             countEnum = 5;
-            countNextEnum = 5;
         }
         if (valueEnum.equals("Seven")){
             countEnum = 6;
-            countNextEnum = 6;
         }
         if (valueEnum.equals("Eight")){
             countEnum = 7;
-            countNextEnum = 7;
         }
         if (valueEnum.equals("Nine")){
             countEnum = 8;
-            countNextEnum = 8;
         }
         if (valueEnum.equals("Ten")){
             countEnum = 9;
-            countNextEnum = 9;
         }
         if (valueEnum.equals("Eleven")){
             countEnum = 10;
-            countNextEnum = 10;
         }
         if (valueEnum.equals("Twelve")){
             countEnum = 11;
-            countNextEnum = 11;
         }
         if (valueEnum.equals("Thirteen")){
             countEnum = 12;
-            countNextEnum = 12;
         }
         if (valueEnum.equals("Fourteen")){
             countEnum = 13;
-            countNextEnum = 13;
         }
         if (valueEnum.equals("Fifteen")){
             countEnum = 14;
-            countNextEnum = 14;
         }
         if (valueEnum.equals("Sixteen")){
             countEnum = 15;
+        }
+        if (valueEnumNext.equals("One")){
+            countNextEnum = 0;
+        }
+        if (valueEnumNext.equals("Two")){
+            countNextEnum = 1;
+        }
+        if (valueEnumNext.equals("Three")){
+            countNextEnum = 2;
+        }
+        if (valueEnumNext.equals("Four")){
+            countNextEnum = 3;
+        }
+        if (valueEnumNext.equals("Five")){
+            countNextEnum = 4;
+        }
+        if (valueEnumNext.equals("Six")){
+            countNextEnum = 5;
+        }
+        if (valueEnumNext.equals("Seven")){
+            countNextEnum = 6;
+        }
+        if (valueEnumNext.equals("Eight")){
+            countNextEnum = 7;
+        }
+        if (valueEnumNext.equals("Nine")){
+            countNextEnum = 8;
+        }
+        if (valueEnumNext.equals("Ten")){
+            countNextEnum = 9;
+        }
+        if (valueEnumNext.equals("Eleven")){
+            countNextEnum = 10;
+        }
+        if (valueEnumNext.equals("Twelve")){
+            countNextEnum = 11;
+        }
+        if (valueEnumNext.equals("Thirteen")){
+            countNextEnum = 12;
+        }
+        if (valueEnumNext.equals("Fourteen")){
+            countNextEnum = 13;
+        }
+        if (valueEnumNext.equals("Fifteen")){
+            countNextEnum = 14;
+        }
+        if (valueEnumNext.equals("Sixteen")){
             countNextEnum = 15;
         }
 //        Map<Integer, String> mapOfEnum = new HashMap<Integer, String>();
