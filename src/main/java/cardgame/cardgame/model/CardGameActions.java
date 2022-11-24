@@ -220,6 +220,30 @@ public class CardGameActions {
 //        mapOfEnum.put(countEnum, valueEnum);
     }
 
+    public void terminate(){
+        CardGameEnum cardGameEnum = new CardGameEnum();
+        baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+                "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
+        auxList = new ArrayList<>();
+        n = 0;
+        r = 1;
+        valueEnum = "One";
+        valueEnumNext = "One";
+        disabled = false;
+        revDisabled = true;
+        disabledOption = false;
+        finalDisabled = true;
+        visibleDisabled = false;
+        countEnum = 0;
+        countNextEnum = 0;
+        sumpoint = 0;
+        CardGameEnum.point = new int[16];
+        CardGameEnum.status = new int[16];
+        CardGameEnum.setA(0);
+        CardGameEnum.setB(0);
+        CardGameEnum.setC(0);
+    }
+
     public int sumPoints() {
         sumpoint = Arrays.stream(CardGameEnum.point).sum();
         return sumpoint;

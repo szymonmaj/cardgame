@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CardGameDeckEnum {
-    public static int status;
     public static String[] description = new String[9];
 
     public enum Deck{

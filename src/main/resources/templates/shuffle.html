@@ -49,7 +49,12 @@ img {
     <div class="statement">
         <span th:text="${cardGameEnum.getKom}"></span>
     </div><br/><br/>
-    <span>Suma punktów: </span><span th:text="${cardGameActions.sumPoints}"></span>
+    <span>Suma punktów: </span><span th:text="${cardGameActions.sumPoints}"></span><br/><br/><br/><br/><br/><br/>
+</div>
+<div align="right">
+<form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}" id = "myform">
+    <input type="submit" class="btn-right" value="Restart" name="name"/><br/>
+</form>
 </div>
 </body>
 </html>

@@ -78,6 +78,10 @@ public class CardGameController {
             }
             return "nextCard";
         }
+        if (name.equals("Restart")){
+            cardGameActions.terminate();
+        return "start";
+        }
         else {
             return "deck";
         }

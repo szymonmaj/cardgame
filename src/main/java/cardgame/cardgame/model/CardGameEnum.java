@@ -17,11 +17,9 @@ public class CardGameEnum {
     public static void setKom(String kom) {
         CardGameEnum.kom = kom;
     }
-
     public static String getKom() {
         return kom;
     }
-
     public static String getVal() {
         return val;
     }
