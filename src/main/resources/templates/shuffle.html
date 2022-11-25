@@ -13,26 +13,25 @@ img {
     <script type="text/javascript" th:src="@{/js/action.js}"></script>
 </head>
 <body>
-<form method="post" id="something" action="/shuffle">
-<!--    <button type="submit" name="second" th:disabled="${cardGameActions.disabled}">Second</button>-->
-<!--    <div th:switch="${disableSecondButton}">-->
-<!--        <button type="submit" name="second" th:case="'true'" disabled>Second</button>-->
-<!--        <button type="submit" name="second" th:case="*" th:disabled="${cardGameActions.disabled}">Second</button>-->
-<!--    </div>-->
-</form>
+<!--<form method="post" id="something" action="/shuffle">-->
+<!--&lt;!&ndash;    <button type="submit" name="second" th:disabled="${cardGameActions.disabled}">Second</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div th:switch="${disableSecondButton}">&ndash;&gt;-->
+<!--&lt;!&ndash;        <button type="submit" name="second" th:case="'true'" disabled>Second</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button type="submit" name="second" th:case="*" th:disabled="${cardGameActions.disabled}">Second</button>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--</form>-->
 
 <div align="center">
 <h2>WYBÓR</h2>
+    <div id="block">
     <div th:if="${cardGameActions.visibleDisabled}">
-        <input type="hidden" style="width: 750px;" th:value="${cardGameActions.getBaseList}">
+        <span hidden style='width: 750px;' th:text="${cardGameActions.getBaseList}"></span>
     </div>
     <div th:unless="${cardGameActions.visibleDisabled}">
-        <input type="text" style="width: 750px;" th:value="${cardGameActions.getBaseList}">
+        <span style='width: 750px;' th:text="${cardGameActions.getBaseList}"></span>
     </div>
-    <button class="btn"><a href="/">Powrót</a></button>
     <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}">
-        <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
-        <input type="submit" th:disabled="${cardGameActions.finalDisabled}" value="Pokaż kartę" name="name"/><br/>
+        <br/><input type="submit" th:disabled="${cardGameActions.finalDisabled}" value="Pokaż kartę" name="name"/><br/>
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj aktualną kartę" name="name"/><br/>
         <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
     </form>
@@ -46,14 +45,18 @@ img {
 <!--    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getC}">-->
     <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getC}"></span><br/><br/>
     <span>Komunikat: </span>
-    <div class="statement">
-        <span th:text="${cardGameEnum.getKom}"></span>
-    </div><br/><br/>
-    <span>Suma punktów: </span><span th:text="${cardGameActions.sumPoints}"></span><br/><br/><br/><br/><br/><br/>
+        <div class="statement">
+            <span th:text="${cardGameEnum.getKom}"></span>
+        </div><br/><br/>
+        <div id="option">
+            <span>Suma punktów: </span><span th:text="${cardGameActions.sumPoints}"></span>
+       </div>
+       <br/><button class="btn"><a href="/">Powrót</a></button>
+    </div>
 </div>
 <div align="right">
 <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}" id = "myform">
-    <input type="submit" class="btn-right" value="Restart" name="name"/><br/>
+    <br/><br/><br/><input type="submit" class="btn-right" value="Restart" name="name"/><br/>
 </form>
 </div>
 </body>

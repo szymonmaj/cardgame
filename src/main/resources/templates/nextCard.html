@@ -12,12 +12,16 @@
 <body>
 <div align="center">
 <h2>NASTĘPNA KARTA</h2>
-<span class="desc">Numer karty: </span><span th:text="${cardGameActions.displayNext('numer')}"></span><br/>
-<span class="desc">Nazwa: </span><span th:text="${cardGameActions.displayNext('nazwa')}"></span><br/>
-<span class="desc">Poziom: </span><span th:text="${cardGameActions.displayNext('poziom')}"></span><br/>
-<span class="desc">Punkty: </span><span th:text="${cardGameActions.displayNext('punkty')}"></span><br/><br/>
-<span class="desc">Opis: </span><span th:text="${cardGameActions.displayNext('opis')}"></span><br/><br/>
-<button class="btn"><a href="/shuffle">Powrót</a></button>
+    <div id="block">
+        <div id="option">
+            <span class="desc">Numer karty: </span><span th:text="${cardGameActions.displayNext('numer')}"></span><br/>
+            <span class="desc">Nazwa: </span><span th:text="${cardGameActions.displayNext('nazwa')}"></span><br/>
+            <span class="desc">Poziom: </span><span th:text="${cardGameActions.displayNext('poziom')}"></span><br/>
+            <span class="desc">Punkty: </span><span th:text="${cardGameActions.displayNext('punkty')}"></span><br/><br/>
+            <span class="desc">Opis: </span><span th:text="${cardGameActions.displayNext('opis')}"></span><br/>
+        </div>
+        <br/><button class="btn"><a href="/shuffle">Powrót</a></button>
+    </div>
 </div>
 </body>
 </html>

@@ -12,15 +12,17 @@
 <body>
 <div align="center">
 <h2>KARTA</h2>
-<span class="desc">Numer karty: </span><span th:text="${cardGameActions.display('numer')}"></span><br/>
-<span class="desc">Nazwa: </span><span th:text="${cardGameActions.display('nazwa')}"></span><br/>
-<span class="desc">Poziom: </span><span th:text="${cardGameActions.display('poziom')}"></span><br/>
-<span class="desc">Punkty: </span><span th:text="${cardGameActions.display('punkty')}"></span><br/><br/>
-
+    <div id="block">
+        <div id="option">
+            <span class="desc">Numer karty: </span><span th:text="${cardGameActions.display('numer')}"></span><br/>
+            <span class="desc">Nazwa: </span><span th:text="${cardGameActions.display('nazwa')}"></span><br/>
+            <span class="desc">Poziom: </span><span th:text="${cardGameActions.display('poziom')}"></span><br/>
+            <span class="desc">Punkty: </span><span th:text="${cardGameActions.display('punkty')}"></span><br/><br/>
+        </div>
 <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
     <span class="desc">Opcja 1: </span><span th:text="${cardGameActions.display('opcja1')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-    <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 1" name="name"/><br/>
+        <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 1" name="name"/><br/>
     </form>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
     <div th:switch="${cardGameActions.valueEnum}">
@@ -43,13 +45,14 @@
     </form>
     <span class="desc">Opcja 2: </span><span th:text="${cardGameActions.display('opcja2')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-    <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/><br/>
+        <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/><br/>
     </form>
     <span class="desc">Opcja 3: </span><span th:text="${cardGameActions.display('opcja3')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-    <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/><br/>
+        <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/><br/>
     </form>
-<button class="btn"><a href="/shuffle">Powrót</a></button>
+    <button class="btn"><a href="/shuffle">Powrót</a></button>
+    </div>
 </div>
 </body>
 </html>
