@@ -28,7 +28,27 @@ img {
         <span hidden style='width: 750px;' th:text="${cardGameActions.getBaseList}"></span>
     </div>
     <div th:unless="${cardGameActions.visibleDisabled}">
-        <span style='width: 750px;' th:text="${cardGameActions.getBaseList}"></span>
+        <div th:if="${cardGameActions.finalDisabled}">
+                <span style='width: 750px;' th:text="${cardGameActions.getBaseList}"></span>
+        </div>
+        <div th:unless="${cardGameActions.finalDisabled}">
+                <img th:src="${cardGameActions.sendImage('0')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('1')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('2')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('3')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('4')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('5')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('6')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('7')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('8')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('9')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('10')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('11')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('12')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('13')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('14')}" style="width:55px">
+                <img th:src="${cardGameActions.sendImage('15')}" style="width:55px">
+        </div>
     </div>
     <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}">
         <br/><input type="submit" th:disabled="${cardGameActions.finalDisabled}" value="Pokaż kartę" name="name"/><br/>

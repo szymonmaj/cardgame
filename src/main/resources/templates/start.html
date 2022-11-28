@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <style>
-img {
+img.big {
   background-color: white;
   clear: both;
-  padding: 30px 60px 60px 60px;
+  padding: 30px 30px 30px 30px;
   border-radius: 30px;
   box-shadow: 0px 0px 15px #e9e4e0;
   border: 1px solid #e3e3e3;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  }
+img.small {
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  padding: 5px;
 }
 span.center {
         font-size: 120%;
@@ -61,12 +66,29 @@ span.center {
     <span class="center">Podejrzyj następną kartę - sprawdź co Cię czeka na kolejnej karcie. </span><br/>
     <span class="center">Komunikat - informacje dotyczące Twoich wyborów oraz przebiegu rozgywki. </span><br/>
     <span class="center">Suma punktów - ilość punktów, które zdobyłeś do tego momentu. </span><br/>
-    <img src="/gfx/manual1.PNG" style="width:550px"><br/>
+    <img src="/gfx/manual1.PNG" style="width:550px" class="big"><br/>
     <span class="center">Opcja 1, 2 i 3 - jeżeli spełniłeś warunki, możesz skorzystać z opcji wyboru i uzyskać korzyść wymienioną w opisie. </span><br/>
     <span class="center">Jeżeli opcja jest niemożliwa to realizacji otrzymasz stosowny komunikat. </span><br/>
     <span class="center">Pamiętaj, że możesz mieć maksymalnie 4 sztuki każdego surowca. Jeżeli posiadasz 2 sztuki, nie będziesz mógł skorzystać z opcji Uzyskaj 3 sztuki surowca. </span><br/>
     <span class="center">Opcja A, B i C jest dostępna, jeżeli informacja o tym pojawi się w opisie. </span><br/>
-    <img src="/gfx/manual2.PNG" style="width:550px"><br/>
+    <img src="/gfx/manual2.PNG" style="width:550px" class="big"><br/>
+    <span class="center">Lista kart: </span><br/>
+    <img src="/gfx/fish_house.png" style="width:100px" class="small">
+    <span>Chata rybaka - 3 szt. </span><br/>
+    <img src="/gfx/lumber_house.png" style="width:100px" class="small">
+    <span>Chata drwala - 3 szt. </span><br/>
+    <img src="/gfx/mine.png" style="width:100px" class="small">
+    <span>Kamieniołom - 3 szt. </span><br/>
+    <img src="/gfx/market.png" style="width:100px" class="small">
+    <span>Targ - 1 szt. </span><br/>
+    <img src="/gfx/merchant.png" style="width:100px" class="small">
+    <span>Chata kupca - 1 szt. </span><br/>
+    <img src="/gfx/workshop.png" style="width:100px" class="small">
+    <span>Warsztat - 1 szt. </span><br/>
+    <img src="/gfx/cottage.png" style="width:100px" class="small">
+    <span>Chata mieszkalna - 2 szt. </span><br/>
+    <img src="/gfx/temple.png" style="width:100px" class="small">
+    <span>Świątynia - 2 szt. </span><br/>
 </div>
 </body>
 </html>

@@ -20,9 +20,11 @@ public class CardGameActions {
     private static Boolean disabledOption = false;
     private static Boolean finalDisabled = true;
     private static Boolean visibleDisabled = false;
+
     private static int countEnum = 0;
     private static int countNextEnum = 0;
     private int sumpoint = 0;
+    private static Map <String, String> hm = new HashMap<String, String>();
 
     @NonNull
     public void result1(String val){
@@ -58,6 +60,9 @@ public class CardGameActions {
         if (val.equals("opcja3")) {
             resultEnum3 = resultEnum2[8];
         }
+        if (val.equals("obraz")) {
+            resultEnum3 = resultEnum2[9];
+        }
         return resultEnum3;
     }
 
@@ -79,7 +84,41 @@ public class CardGameActions {
         if (val.equals("opis")) {
             resultEnum3 = resultEnum2[5];
         }
+        if (val.equals("obraz")) {
+            resultEnum3 = resultEnum2[9];
+        }
         return resultEnum3;
+    }
+
+    public String sendImage(int val) {
+        String tempResult = null;
+        if (!hm.isEmpty()) {
+            if (baseList.get(val) == "One" || baseList.get(val) == "Two" || baseList.get(val) == "Three") {
+                tempResult = hm.get("One");
+            }
+            if (baseList.get(val) == "Four" || baseList.get(val) == "Five" || baseList.get(val) == "Six") {
+                tempResult = hm.get("Two");
+            }
+            if (baseList.get(val) == "Seven" || baseList.get(val) == "Eight" || baseList.get(val) == "Nine") {
+                tempResult = hm.get("Three");
+            }
+            if (baseList.get(val) == "Ten") {
+                tempResult = hm.get("Four");
+            }
+            if (baseList.get(val) == "Eleven") {
+                tempResult = hm.get("Five");
+            }
+            if (baseList.get(val) == "Twelve") {
+                tempResult = hm.get("Six");
+            }
+            if (baseList.get(val) == "Thirteen" || baseList.get(val) == "Fourteen") {
+                tempResult = hm.get("Seven");
+            }
+            if (baseList.get(val) == "Fifteen" || baseList.get(val) == "Sixteen") {
+                tempResult = hm.get("Eight");
+            }
+        }
+        return tempResult;
     }
 
     public void mill(){
@@ -91,6 +130,14 @@ public class CardGameActions {
         auxList = new ArrayList<>(baseList);
         auxList.add("Seventeen");
         baseList = auxList;
+        hm.put("One", "/gfx/fish_house.png");
+        hm.put("Two", "/gfx/lumber_house.png");
+        hm.put("Three", "/gfx/mine.png");
+        hm.put("Four", "/gfx/market.png");
+        hm.put("Five", "/gfx/merchant.png");
+        hm.put("Six", "/gfx/workshop.png");
+        hm.put("Seven", "/gfx/cottage.png");
+        hm.put("Eight", "/gfx/temple.png");
         return baseList;
         }
 

@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <style>
-
+img {
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  padding: 5px;
+  float: left;
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -14,6 +19,7 @@
 <h2>KARTA</h2>
     <div id="block">
         <div id="option">
+            <img th:src="${cardGameActions.display('obraz')}" style="width:150px">
             <span class="desc">Numer karty: </span><span th:text="${cardGameActions.display('numer')}"></span><br/>
             <span class="desc">Nazwa: </span><span th:text="${cardGameActions.display('nazwa')}"></span><br/>
             <span class="desc">Poziom: </span><span th:text="${cardGameActions.display('poziom')}"></span><br/>
