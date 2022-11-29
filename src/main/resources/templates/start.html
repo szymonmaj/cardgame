@@ -1,50 +1,8 @@
 <!DOCTYPE html>
 <html lang="pl" xmlns:th="http://www.thymeleaf.org">
 <style>
-img.big {
-  background-color: white;
-  clear: both;
-  padding: 30px 30px 30px 30px;
-  border-radius: 30px;
-  box-shadow: 0px 0px 15px #e9e4e0;
-  border: 1px solid #e3e3e3;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  }
-img.small {
-  border: 1px solid #ddd;
-  border-radius: 40px;
-  padding: 5px;
-}
-span.center {
-        font-size: 120%;
-        color: #DC143C;
-        display: flex;
-        justify-content: center
-}
-.btn-cntr {
-  display: inline-block;
-  margin: 0 10px 10px 0;
-  padding: 10px 20px;
-  width: auto;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 100%;
-  color: #fff;
-  background-color: #0065e9;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.big-center {
-        font-size: 300%;
-        font-weight: bold;
-        font-family: 'Roboto Slab', serif;
-        color: #DC143C;
-        display: flex;
-        justify-content: center
-}
+
+
 </style>
 <head>
     <meta charset="UTF-8">
@@ -57,7 +15,7 @@ span.center {
 <form action="#" th:action="@{/}" method="post" th:object="${cardGameActions}" id = "myform">
     <input type="submit" class="btn-cntr" th:disabled="${cardGameActions.disabled}" value="Losuj" name="name"/><br/>
 </form>
-<button class="btn-cntr"><a href="/shuffle">Podejrzyj</a></button><br/>
+<button class="btn-cntr"><a href="/shuffle">Zagraj</a></button><br/>
 <div id="block">
     <h4>INSTRUKCJA</h4>
     <span class="center">Wylosuj talię, a następnie przejdź na kolejną stronę. Wylosowana talia jest widoczna do czasu wyboru pierwszej karty. </span><br/>
@@ -72,7 +30,7 @@ span.center {
     <span class="center">Pamiętaj, że możesz mieć maksymalnie 4 sztuki każdego surowca. Jeżeli posiadasz 2 sztuki, nie będziesz mógł skorzystać z opcji Uzyskaj 3 sztuki surowca. </span><br/>
     <span class="center">Opcja A, B i C jest dostępna, jeżeli informacja o tym pojawi się w opisie. </span><br/>
     <img src="/gfx/manual2.PNG" style="width:550px" class="big"><br/>
-    <span class="center">Lista kart: </span><br/>
+    <span>Lista kart: </span><br/><br/>
     <img src="/gfx/fish_house.png" style="width:100px" class="small">
     <span>Chata rybaka - 3 szt. </span><br/>
     <img src="/gfx/lumber_house.png" style="width:100px" class="small">
