@@ -7,6 +7,17 @@ img {
   padding: 5px;
   float: left;
 }
+.btn-small {
+  display: inline-block;
+  margin: 0 3px 3px 0;
+  padding: 3px 6px;
+  width: auto;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 100%;
+  color: #fff;
+  background-color: #0065e9;
+}
 </style>
 <head>
     <meta charset="UTF-8">
@@ -28,19 +39,19 @@ img {
 <!--<button th:value="${cardGameActions.result1}" class="btn right">Wybierz opcję 1</button><br/>-->
     <span class="desc">Opcja 1: </span><span th:text="${cardGameActions.display('opcja1')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-        <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 1" name="name"/><br/>
+        <input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="Opcja 1" name="name"/><br/>
     </form>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
     <div th:switch="${cardGameActions.valueEnum}">
         <p th:case="'Ten'">
-            <span class="desc">Ryba: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
-            <span class="desc">Drewno: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
-            <span class="desc">Ruda: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/><br/>
+            <span class="desc">Ryba: </span><input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
+            <span class="desc">Drewno: </span><input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
+            <span class="desc">Ruda: </span><input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/><br/>
         </p>
         <p th:case="'Eleven'">
-            <span class="desc">Ryba: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
-            <span class="desc">Drewno: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
-            <span class="desc">Ruda: </span><input type="submit" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/><br/>
+            <span class="desc">Ryba: </span><input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
+            <span class="desc">Drewno: </span><input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="B" name="name"/>
+            <span class="desc">Ruda: </span><input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="C" name="name"/><br/>
         </p>
         <p th:case="*">
             <span class="desc" hidden>Ryba: </span><input type="hidden" th:disabled="${cardGameActions.disabledOption}" value="A" name="name"/>
@@ -51,11 +62,11 @@ img {
     </form>
     <span class="desc">Opcja 2: </span><span th:text="${cardGameActions.display('opcja2')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-        <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/><br/>
+        <input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/><br/>
     </form>
     <span class="desc">Opcja 3: </span><span th:text="${cardGameActions.display('opcja3')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-        <input type="submit" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/><br/>
+        <input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/><br/><br/>
     </form>
     <button class="btn"><a href="/shuffle">Powrót</a></button>
     </div>

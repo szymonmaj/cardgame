@@ -51,18 +51,15 @@ img {
         </div>
     </div>
     <form action="#" th:action="@{/shuffle}" method="post" th:object="${cardGameActions}">
-        <br/><input type="submit" th:disabled="${cardGameActions.finalDisabled}" value="Pokaż kartę" name="name"/><br/>
-        <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj aktualną kartę" name="name"/><br/>
-        <input type="submit" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
+        <br/><input type="submit" class="btn-cntr" th:disabled="${cardGameActions.finalDisabled}" value="Pokaż kartę" name="name"/><br/>
+        <input type="submit" class="btn-cntr" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj aktualną kartę" name="name"/><br/>
+        <input type="submit" class="btn-cntr" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
     </form>
     <img src="/gfx/fish.png" style="width:45px">
-<!--    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getA}">-->
     <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getA}"></span>
     <img src="/gfx/wood.jpg" style="width:45px">
-<!--    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getB}">-->
     <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getB}"></span>
     <img src="/gfx/ore.png" style="width:45px">
-<!--    <input type="text" class="text-desc" th:disabled="true" th:value="${cardGameEnum.getC}">-->
     <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getC}"></span><br/><br/>
     <span>Komunikat: </span>
         <div class="statement">
@@ -73,7 +70,7 @@ img {
             <span>Runda: </span><span th:text="${cardGameActions.getR}"></span><br/>
             <span>Suma punktów: </span><span th:text="${cardGameActions.sumPoints}"></span>
         </div>
-            <br/><button class="btn"><a href="/">Powrót</a></button>
+            <br/><br/><button class="btn-cntr"><a href="/">Powrót</a></button>
         </div>
 </div>
 <div align="right">

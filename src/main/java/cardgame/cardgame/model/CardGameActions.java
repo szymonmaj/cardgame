@@ -24,7 +24,7 @@ public class CardGameActions {
     private static int countEnum = 0;
     private static int countNextEnum = 0;
     private int sumpoint = 0;
-    private static Map <String, String> hm = new HashMap<String, String>();
+    private static Map <String, String> pictureHashMap = new HashMap<String, String>();
 
     @NonNull
     public void result1(String val){
@@ -92,30 +92,30 @@ public class CardGameActions {
 
     public String sendImage(int val) {
         String tempResult = null;
-        if (!hm.isEmpty()) {
+        if (!pictureHashMap.isEmpty()) {
             if (baseList.get(val) == "One" || baseList.get(val) == "Two" || baseList.get(val) == "Three") {
-                tempResult = hm.get("One");
+                tempResult = pictureHashMap.get("One");
             }
             if (baseList.get(val) == "Four" || baseList.get(val) == "Five" || baseList.get(val) == "Six") {
-                tempResult = hm.get("Two");
+                tempResult = pictureHashMap.get("Two");
             }
             if (baseList.get(val) == "Seven" || baseList.get(val) == "Eight" || baseList.get(val) == "Nine") {
-                tempResult = hm.get("Three");
+                tempResult = pictureHashMap.get("Three");
             }
             if (baseList.get(val) == "Ten") {
-                tempResult = hm.get("Four");
+                tempResult = pictureHashMap.get("Four");
             }
             if (baseList.get(val) == "Eleven") {
-                tempResult = hm.get("Five");
+                tempResult = pictureHashMap.get("Five");
             }
             if (baseList.get(val) == "Twelve") {
-                tempResult = hm.get("Six");
+                tempResult = pictureHashMap.get("Six");
             }
             if (baseList.get(val) == "Thirteen" || baseList.get(val) == "Fourteen") {
-                tempResult = hm.get("Seven");
+                tempResult = pictureHashMap.get("Seven");
             }
             if (baseList.get(val) == "Fifteen" || baseList.get(val) == "Sixteen") {
-                tempResult = hm.get("Eight");
+                tempResult = pictureHashMap.get("Eight");
             }
         }
         return tempResult;
@@ -130,14 +130,14 @@ public class CardGameActions {
         auxList = new ArrayList<>(baseList);
         auxList.add("Seventeen");
         baseList = auxList;
-        hm.put("One", "/gfx/fish_house.png");
-        hm.put("Two", "/gfx/lumber_house.png");
-        hm.put("Three", "/gfx/mine.png");
-        hm.put("Four", "/gfx/market.png");
-        hm.put("Five", "/gfx/merchant.png");
-        hm.put("Six", "/gfx/workshop.png");
-        hm.put("Seven", "/gfx/cottage.png");
-        hm.put("Eight", "/gfx/temple.png");
+        pictureHashMap.put("One", "/gfx/fish_house.png");
+        pictureHashMap.put("Two", "/gfx/lumber_house.png");
+        pictureHashMap.put("Three", "/gfx/mine.png");
+        pictureHashMap.put("Four", "/gfx/market.png");
+        pictureHashMap.put("Five", "/gfx/merchant.png");
+        pictureHashMap.put("Six", "/gfx/workshop.png");
+        pictureHashMap.put("Seven", "/gfx/cottage.png");
+        pictureHashMap.put("Eight", "/gfx/temple.png");
         return baseList;
         }
 

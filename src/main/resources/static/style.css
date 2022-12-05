@@ -89,6 +89,17 @@ h4 {
   color: #fff;
   background-color: #ff0000;
 }
+.btn-small {
+  display: inline-block;
+  margin: 0 3px 3px 0;
+  padding: 3px 6px;
+  width: auto;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 100%;
+  color: #fff;
+  background-color: #0065e9;
+}
 .big-center {
         font-size: 300%;
         font-weight: bold;
