@@ -13,8 +13,9 @@ import javax.servlet.http.HttpSession;
 @Controller
 @AllArgsConstructor
 public class CardGameController {
-    CardGameActions cardGameActions;
-    CardGameEnum cardGameEnum;
+    private final CardGameActions cardGameActions;
+    private final CardGameEnum cardGameEnum;
+
     @GetMapping("/")
     public String showForm(Model model, HttpSession session) {
         session.setAttribute("licznik", 0);
@@ -41,30 +42,32 @@ public class CardGameController {
     }
 
     @PostMapping("/")
-    public String submitForm(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
+    public String submitForm(@RequestParam(required = false) String name, Model model) {
+        model.addAttribute("cardGameActions", cardGameActions);
         if (name.equals("Losuj")){
-            CardGameActions.shuffleList();
-            CardGameActions.setDisabled(true);
-            CardGameActions.setFinalDisabled(false);
+            cardGameActions.shuffleList();
+            cardGameActions.setDisabled(true);
+            cardGameActions.setFinalDisabled(false);
         }
         return "start";
     }
 
     @PostMapping("/shuffle")
-    public String submitShuffle(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
+    public String submitShuffle(@RequestParam(required = false) String name, Model model) {
+        model.addAttribute("cardGameActions", cardGameActions);
         if (name.equals("Pokaż kartę")){
             cardGameActions.mill();
-            CardGameActions.setRevDisabled(false);
-            CardGameActions.setDisabledOption(false);
-            CardGameActions.setVisibleDisabled(true);
-            if (CardGameActions.getN() != 0) {
-                CardGameEnum.setKom(" ");
+            cardGameActions.setRevDisabled(false);
+            cardGameActions.setDisabledOption(false);
+            cardGameActions.setVisibleDisabled(true);
+            if (cardGameActions.getN() != 0) {
+                cardGameEnum.setKom(" ");
             }
             return "deck";
         }
         if (name.equals("Podejrzyj aktualną kartę")){
-            if (!CardGameEnum.getKom().contains("Koniec")) {
-                if (CardGameActions.getN() != 0 || !CardGameEnum.getKom().contains("Runda")) {
+            if (!cardGameEnum.getKom().contains("Koniec")) {
+                if (cardGameActions.getN() != 0 || !CardGameEnum.getKom().contains("Runda")) {
                 CardGameEnum.setKom(" ");
                 }
             }
@@ -72,7 +75,7 @@ public class CardGameController {
         }
         if (name.equals("Podejrzyj następną kartę")){
             if (!CardGameEnum.getKom().contains("Koniec")) {
-                if (CardGameActions.getN() != 0 || !CardGameEnum.getKom().contains("Runda")) {
+                if (cardGameActions.getN() != 0 || !CardGameEnum.getKom().contains("Runda")) {
                     CardGameEnum.setKom(" ");
                 }
             }
@@ -88,7 +91,8 @@ public class CardGameController {
     }
 
     @PostMapping("/deck")
-    public String submitDeck(@ModelAttribute CardGameActions cardGameActions, @ModelAttribute CardGameEnum cardGameEnum, @RequestParam(required = false) String name) {
+    public String submitDeck(Model model, @ModelAttribute CardGameEnum cardGameEnum, @RequestParam(required = false) String name) {
+        model.addAttribute("cardGameActions", cardGameActions);
         if (!cardGameEnum.getKom().contains("Runda:")) {
             cardGameEnum.setKom(" ");
         }
@@ -98,7 +102,7 @@ public class CardGameController {
                 if (cardGameEnum.getKom().contains("akcja")){
                 }
                 else {
-                    CardGameActions.setDisabledOption(true);
+                    cardGameActions.setDisabledOption(true);
                 }
             }
             if (name.equals("B")){
@@ -106,7 +110,7 @@ public class CardGameController {
                 if (cardGameEnum.getKom().contains("akcja")){
                 }
                 else {
-                    CardGameActions.setDisabledOption(true);
+                    cardGameActions.setDisabledOption(true);
                 }
             }
             if (name.equals("C")){
@@ -114,14 +118,14 @@ public class CardGameController {
                 if (cardGameEnum.getKom().contains("akcja")){
                 }
                 else {
-                    CardGameActions.setDisabledOption(true);
+                    cardGameActions.setDisabledOption(true);
                 }
             }
             if (name.equals("Opcja 1")) {
                 cardGameActions.result1("Z");
                 if (cardGameEnum.getKom().contains("akcja")) {
                 } else {
-                    CardGameActions.setDisabledOption(true);
+                    cardGameActions.setDisabledOption(true);
                 }
             }
         }
@@ -130,7 +134,7 @@ public class CardGameController {
             if (cardGameEnum.getKom().contains("akcja")){
             }
             else {
-                CardGameActions.setDisabledOption(true);
+                cardGameActions.setDisabledOption(true);
             }
         }
         if (name.equals("Opcja 3")){
@@ -138,14 +142,15 @@ public class CardGameController {
             if (cardGameEnum.getKom().contains("akcja")){
             }
             else {
-                CardGameActions.setDisabledOption(true);
+                cardGameActions.setDisabledOption(true);
             }
         }
         return "shuffle";
     }
 
     @PostMapping("/nextCard")
-    public String submitNextCard(@ModelAttribute CardGameActions cardGameActions, @RequestParam(required = false) String name) {
+    public String submitNextCard(Model model, @RequestParam(required = false) String name) {
+        model.addAttribute("cardGameActions", cardGameActions);
         return "nextCard";
     }
 }

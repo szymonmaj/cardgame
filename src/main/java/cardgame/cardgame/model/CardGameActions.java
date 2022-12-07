@@ -8,23 +8,23 @@ import java.util.*;
 @Repository
 public class CardGameActions {
 
-    private static List<String> baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
+    private List<String> baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
-    private static List<String> auxList = new ArrayList<>();
-    private static int n = 0;
-    private static int r = 1;
-    private static String valueEnum = "One";
-    private static String valueEnumNext = "One";
-    private static Boolean disabled = false;
-    private static Boolean revDisabled = true;
-    private static Boolean disabledOption = false;
-    private static Boolean finalDisabled = true;
-    private static Boolean visibleDisabled = false;
+    private List<String> auxList = new ArrayList<>();
+    private int n = 0;
+    private int r = 1;
+    private String valueEnum = "One";
+    private  String valueEnumNext = "One";
+    private  Boolean disabled = false;
+    private  Boolean revDisabled = true;
+    private  Boolean disabledOption = false;
+    private  Boolean finalDisabled = true;
+    private  Boolean visibleDisabled = false;
 
-    private static int countEnum = 0;
-    private static int countNextEnum = 0;
+    private  int countEnum = 0;
+    private  int countNextEnum = 0;
     private int sumpoint = 0;
-    private static Map <String, String> pictureHashMap = new HashMap<String, String>();
+    private  Map <String, String> pictureHashMap = new HashMap<String, String>();
 
     @NonNull
     public void result1(String val){
@@ -125,7 +125,7 @@ public class CardGameActions {
         takeList();
     }
 
-    public static List<String> shuffleList(){
+    public  List<String> shuffleList(){
         Collections.shuffle(baseList);
         auxList = new ArrayList<>(baseList);
         auxList.add("Seventeen");
@@ -300,65 +300,69 @@ public class CardGameActions {
         return disabled;
     }
 
-    public static void setDisabled(Boolean disabled) {
-        CardGameActions.disabled = disabled;
+    public  void setDisabled(Boolean disabled) {
+        this.disabled = disabled;
     }
 
     public Boolean getRevDisabled() {
         return revDisabled;
     }
 
-    public static void setRevDisabled(Boolean revDisabled) {
-        CardGameActions.revDisabled = revDisabled;
+    public  void setRevDisabled(Boolean revDisabled) {
+        this.revDisabled = revDisabled;
     }
 
     public Boolean getDisabledOption() {
         return disabledOption;
     }
 
-    public static void setDisabledOption(Boolean disabledOption) {
-        CardGameActions.disabledOption = disabledOption;
+    public  void setDisabledOption(Boolean disabledOption) {
+        this.disabledOption = disabledOption;
     }
 
-    public static Boolean getFinalDisabled() {
+    public  Boolean getFinalDisabled() {
         return finalDisabled;
     }
 
-    public static void setFinalDisabled(Boolean finalDisabled) {
-        CardGameActions.finalDisabled = finalDisabled;
+    public  void setFinalDisabled(Boolean finalDisabled) {
+        this.finalDisabled = finalDisabled;
     }
 
-    public static Boolean getVisibleDisabled() {return visibleDisabled;}
+    public  Boolean getVisibleDisabled() {return visibleDisabled;}
 
-    public static void setVisibleDisabled(Boolean visibleDisabled) {
-        CardGameActions.visibleDisabled = visibleDisabled;
+    public  void setVisibleDisabled(Boolean visibleDisabled) {
+        this.visibleDisabled = visibleDisabled;
     }
 
-    public static List<String> getBaseList() {
+    public static void dupa() {
+
+    }
+
+    public  List<String> getBaseList() {
         return baseList;
     }
 
-    public static void setBaseList(List<String> baseList) {
-        CardGameActions.baseList = baseList;
+    public  void setBaseList(List<String> baseList) {
+        this.baseList = baseList;
     }
 
-    public static int getN() {
+    public  int getN() {
         return n;
     }
 
-    public static void setN(int n) {
-        CardGameActions.n = n;
+    public  void setN(int n) {
+        this.n = n;
     }
 
-    public static int getR() {
+    public  int getR() {
         return r;
     }
 
-    public static void setR(int r) {
-        CardGameActions.r = r;
+    public  void setR(int r) {
+        this.r = r;
     }
 
-    public static String getValueEnum() {
+    public  String getValueEnum() {
         return valueEnum;
     }
 
