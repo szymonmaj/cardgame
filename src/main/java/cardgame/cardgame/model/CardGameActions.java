@@ -1,11 +1,14 @@
 package cardgame.cardgame.model;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 @Repository
+@Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class CardGameActions {
 
     private List<String> baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
