@@ -5,47 +5,63 @@ import org.springframework.stereotype.Repository;
 import java.util.stream.IntStream;
 @Repository
 public class CardGameEnum {
-//    public static int[] point = IntStream.range(0, 16).toArray();
+
+
+    //    public  int[] point = IntStream.range(0, 16).toArray();
 //{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
-    public static int[] point = new int[16];
+    private static int[] point = new int[16];
     private static int a = 0;
     private static int b = 0;
     private static int c = 0;
-    public static int[] status = new int[16];
+    private static int[] status = new int[16];
     private static String kom = " ";
-    public static String val = "Z";
-    public static void setKom(String kom) {
-        CardGameEnum.kom = kom;
+    private String val = "Z";
+    public  void setKom(String kom) {
+        this.kom = kom;
     }
-    public static String getKom() {
+    public  String getKom() {
         return kom;
     }
-    public static String getVal() {
+    public  String getVal() {
         return val;
     }
-    public static void setVal(String val) {
-        CardGameEnum.val = val;
+    public  void setVal(String val) {
+        this.val = val;
     }
-    public static int getA() {
+    public  int getA() {
         return a;
     }
-    public static void setA(int a) {
-        CardGameEnum.a = a;
+    public  void setA(int a) {
+        this.a = a;
     }
-    public static int getB() {
+    public  int getB() {
         return b;
     }
-    public static void setB(int b) {
-        CardGameEnum.b = b;
+    public  void setB(int b) {
+        this.b = b;
     }
-    public static int getC() {
+    public  int getC() {
         return c;
     }
-    public static void setC(int c) {
-        CardGameEnum.c = c;
+    public  void setC(int c) {
+        this.c = c;
+    }
+    public static int[] getPoint() {
+        return point;
+    }
+    public static int[] getStatus() {
+        return status;
+    }
+    public void setPoint(int[] point) {
+        this.point = point;
+    }
+    public void setStatus(int[] status) {
+        this.status = status;
     }
 
+
     public enum Cards {
+
         One {
             public int perform(int stat, int action, String val) {
                 switch (stat) {
@@ -1145,7 +1161,9 @@ public class CardGameEnum {
         };
         public abstract int perform(int stat, int action, String val);
 
-        public static void main(String[] args) {
+        public void main(String[] args) {
+//            CardGameEnum cardGameEnum = new CardGameEnum();
+//            cardGameEnum.getKom();
             System.out.println("Wynik:" + Cards.Four.perform(3, 2, "B"));
             System.out.println(b);
             System.out.println(point[3]);

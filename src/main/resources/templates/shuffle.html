@@ -56,14 +56,14 @@ img {
         <input type="submit" class="btn-cntr" th:disabled="${cardGameActions.revDisabled}" value="Podejrzyj następną kartę" name="name"/><br/>
     </form>
     <img src="/gfx/fish.png" style="width:45px">
-    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getA}"></span>
+    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameDeck.getA}"></span>
     <img src="/gfx/wood.jpg" style="width:45px">
-    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getB}"></span>
+    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameDeck.getB}"></span>
     <img src="/gfx/ore.png" style="width:45px">
-    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameEnum.getC}"></span><br/><br/>
+    <span style='color:red; margin-right:2.25em; margin-left:2.75em; display:inline-block; font-size: 180%;' class="text-desc" th:text="${cardGameDeck.getC}"></span><br/><br/>
     <span>Komunikat: </span>
         <div class="statement">
-            <span th:text="${cardGameEnum.getKom}"></span>
+            <span th:text="${cardGameDeck.getKom}"></span>
         </div><br/><br/>
         <div id="option">
             <span>Karta: </span><span th:text="${cardGameActions.getN}"></span><br/>

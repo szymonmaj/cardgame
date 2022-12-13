@@ -10,7 +10,7 @@ import java.util.*;
 @Repository
 @Scope(value = "session", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class CardGameActions {
-
+    private final CardGameDeck cardGameDeck;
     private List<String> baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
             "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
     private List<String> auxList = new ArrayList<>();
@@ -31,16 +31,16 @@ public class CardGameActions {
 
     @NonNull
     public void result1(String val){
-        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 1, val);
+        int resultEnum = cardGameDeck.perform(valueEnum, cardGameDeck.getStatus()[countEnum], 1, val);
     }
     public void result2() {
-        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 2, "Z");
+        int resultEnum = cardGameDeck.perform(valueEnum, cardGameDeck.getStatus()[countEnum], 2, "Z");
     }
     public void result3() {
-        int resultEnum = CardGameEnum.Cards.valueOf(valueEnum).perform(CardGameEnum.status[countEnum], 3, "Z");
+        int resultEnum = cardGameDeck.perform(valueEnum, cardGameDeck.getStatus()[countEnum], 3, "Z");
     }
     public String display(String val) {
-        String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(CardGameEnum.status[countEnum]);
+        String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(cardGameDeck.getStatus()[countEnum]);
         String resultEnum3 = null;
         if (val.equals("nazwa")) {
             resultEnum3 = resultEnum2[1];
@@ -70,7 +70,7 @@ public class CardGameActions {
     }
 
     public String displayNext(String val) {
-        String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnumNext).show(CardGameEnum.status[countNextEnum]);
+        String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnumNext).show(cardGameDeck.getStatus()[countNextEnum]);
         String resultEnum3 = null;
         if (val.equals("nazwa")) {
             resultEnum3 = resultEnum2[1];
@@ -96,28 +96,28 @@ public class CardGameActions {
     public String sendImage(int val) {
         String tempResult = null;
         if (!pictureHashMap.isEmpty()) {
-            if (baseList.get(val) == "One" || baseList.get(val) == "Two" || baseList.get(val) == "Three") {
+            if (baseList.get(val).equals("One") || baseList.get(val).equals("Two") || baseList.get(val).equals("Three")) {
                 tempResult = pictureHashMap.get("One");
             }
-            if (baseList.get(val) == "Four" || baseList.get(val) == "Five" || baseList.get(val) == "Six") {
+            if (baseList.get(val).equals("Four") || baseList.get(val).equals("Five") || baseList.get(val).equals("Six")) {
                 tempResult = pictureHashMap.get("Two");
             }
-            if (baseList.get(val) == "Seven" || baseList.get(val) == "Eight" || baseList.get(val) == "Nine") {
+            if (baseList.get(val).equals("Seven") || baseList.get(val).equals("Eight") || baseList.get(val).equals("Nine")) {
                 tempResult = pictureHashMap.get("Three");
             }
-            if (baseList.get(val) == "Ten") {
+            if (baseList.get(val).equals("Ten")) {
                 tempResult = pictureHashMap.get("Four");
             }
-            if (baseList.get(val) == "Eleven") {
+            if (baseList.get(val).equals("Eleven")) {
                 tempResult = pictureHashMap.get("Five");
             }
-            if (baseList.get(val) == "Twelve") {
+            if (baseList.get(val).equals("Twelve")) {
                 tempResult = pictureHashMap.get("Six");
             }
-            if (baseList.get(val) == "Thirteen" || baseList.get(val) == "Fourteen") {
+            if (baseList.get(val).equals("Thirteen") || baseList.get(val).equals("Fourteen")) {
                 tempResult = pictureHashMap.get("Seven");
             }
-            if (baseList.get(val) == "Fifteen" || baseList.get(val) == "Sixteen") {
+            if (baseList.get(val).equals("Fifteen") || baseList.get(val).equals("Sixteen")) {
                 tempResult = pictureHashMap.get("Eight");
             }
         }
@@ -149,14 +149,14 @@ public class CardGameActions {
         if (n == 16) {
             n = 0;
             r++;
-            CardGameEnum cardGameEnum = new CardGameEnum();
-            cardGameEnum.setKom("Runda: " + r);
+            CardGameDeck cardGameDeck= new CardGameDeck();
+            cardGameDeck.setKom("Runda: " + r);
         }
         if (r == 9) {
-            CardGameEnum cardGameEnum = new CardGameEnum();
+            CardGameDeck cardGameDeck= new CardGameDeck();
             setRevDisabled(true);
             setFinalDisabled(true);
-            cardGameEnum.setKom("Koniec gry, Twoje punkty: " + sumPoints());
+            cardGameDeck.setKom("Koniec gry, Twoje punkty: " + sumPoints());
         }
         return n;
     }
@@ -271,7 +271,7 @@ public class CardGameActions {
     }
 
     public void terminate(){
-        CardGameEnum cardGameEnum = new CardGameEnum();
+        CardGameDeck cardGameDeck= new CardGameDeck();
         baseList = Arrays.asList("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight",
                 "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen");
         auxList = new ArrayList<>();
@@ -287,15 +287,15 @@ public class CardGameActions {
         countEnum = 0;
         countNextEnum = 0;
         sumpoint = 0;
-        CardGameEnum.point = new int[16];
-        CardGameEnum.status = new int[16];
-        CardGameEnum.setA(0);
-        CardGameEnum.setB(0);
-        CardGameEnum.setC(0);
+        cardGameDeck.setPoint(new int[16]);
+        cardGameDeck.setStatus(new int[16]);
+        cardGameDeck.setA(0);
+        cardGameDeck.setB(0);
+        cardGameDeck.setC(0);
     }
 
     public int sumPoints() {
-        sumpoint = Arrays.stream(CardGameEnum.point).sum();
+        sumpoint = Arrays.stream(cardGameDeck.getPoint()).sum();
         return sumpoint;
     }
 
@@ -337,10 +337,6 @@ public class CardGameActions {
         this.visibleDisabled = visibleDisabled;
     }
 
-    public static void dupa() {
-
-    }
-
     public  List<String> getBaseList() {
         return baseList;
     }
@@ -369,7 +365,8 @@ public class CardGameActions {
         return valueEnum;
     }
 
-    public CardGameActions() {
+    public CardGameActions(CardGameDeck cardGameDeck) {
+        this.cardGameDeck = cardGameDeck;
         System.out.println("dupa");
         System.out.println(this);
     }
