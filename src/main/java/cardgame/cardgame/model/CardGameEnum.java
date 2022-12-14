@@ -1160,13 +1160,5 @@ public class CardGameEnum {
             }
         };
         public abstract int perform(int stat, int action, String val);
-
-        public void main(String[] args) {
-//            CardGameEnum cardGameEnum = new CardGameEnum();
-//            cardGameEnum.getKom();
-            System.out.println("Wynik:" + Cards.Four.perform(3, 2, "B"));
-            System.out.println(b);
-            System.out.println(point[3]);
-        }
     }
 }
