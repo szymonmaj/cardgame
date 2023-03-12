@@ -60,7 +60,7 @@ public class CardGameDeck {
 
     public int perform(String card, int stat, int action, String val) {
         if (card.equals("One")) {
-            if(stat == 0) {
+            if (stat == 0) {
                 point[0] = 0;
                 if (action == 1 && a < 4) {
                     ++a;
@@ -80,7 +80,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 2) {
+            if (stat == 2) {
                 point[0] = 0;
                 if (action == 1 && a < 3) {
                     a = a + 2;
@@ -96,7 +96,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 3) {
+            if (stat == 3) {
                 point[0] = 0;
                 if (action == 1 && a < 4 && b < 4) {
                     ++a;
@@ -113,7 +113,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 4) {
+            if (stat == 4) {
                 point[0] = 0;
                 if (action == 1 && a < 3 && b < 4) {
                     a = a + 2;
@@ -127,7 +127,7 @@ public class CardGameDeck {
             statusNumber = 0;
         }
         if (card.equals("Two")) {
-            if(stat == 0) {
+            if (stat == 0) {
                 point[1] = 0;
                 if (action == 1 && a < 4) {
                     ++a;
@@ -147,7 +147,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 2) {
+            if (stat == 2) {
                 point[1] = 0;
                 if (action == 1 && a < 3) {
                     a = a + 2;
@@ -163,7 +163,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 3) {
+            if (stat == 3) {
                 point[1] = 0;
                 if (action == 1 && a < 4 && b < 4) {
                     ++a;
@@ -180,7 +180,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 4) {
+            if (stat == 4) {
                 point[1] = 0;
                 if (action == 1 && a < 3 && b < 4) {
                     a = a + 2;
@@ -194,7 +194,7 @@ public class CardGameDeck {
             statusNumber = 1;
         }
         if (card.equals("Three")) {
-            if(stat == 0) {
+            if (stat == 0) {
                 point[2] = 0;
                 if (action == 1 && a < 4) {
                     ++a;
@@ -214,7 +214,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 2) {
+            if (stat == 2) {
                 point[2] = 0;
                 if (action == 1 && a < 3) {
                     a = a + 2;
@@ -230,7 +230,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 3) {
+            if (stat == 3) {
                 point[2] = 0;
                 if (action == 1 && a < 4 && b < 4) {
                     ++a;
@@ -247,7 +247,7 @@ public class CardGameDeck {
                     kom = "Niedozwolona akcja";
                 }
             }
-            if(stat == 4) {
+            if (stat == 4) {
                 point[2] = 0;
                 if (action == 1 && a < 3 && b < 4) {
                     a = a + 2;
