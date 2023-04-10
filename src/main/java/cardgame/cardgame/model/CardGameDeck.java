@@ -455,6 +455,7 @@ public class CardGameDeck {
                 }
                 if (action == 2 && a > 0 && b > 1) {
                     status[6] = 4;
+                    point[6] = 2;
                     --a;
                     b = b - 2;
                     return status[6];
@@ -464,6 +465,7 @@ public class CardGameDeck {
                 }
             }
             if (stat == 3) {
+                point[6] = 0;
                 if (action == 1 && c < 4) {
                     ++c;
                     return status[6];
@@ -516,6 +518,7 @@ public class CardGameDeck {
                 }
                 if (action == 2 && a > 0 && b > 1) {
                     status[7] = 4;
+                    point[7] = 2;
                     --a;
                     b = b - 2;
                     return status[7];
@@ -525,6 +528,7 @@ public class CardGameDeck {
                 }
             }
             if (stat == 3) {
+                point[7] = 0;
                 if (action == 1 && c < 4) {
                     ++c;
                     return status[7];
@@ -577,6 +581,7 @@ public class CardGameDeck {
                 }
                 if (action == 2 && a > 0 && b > 1) {
                     status[8] = 4;
+                    point[8] = 2;
                     --a;
                     b = b - 2;
                     return status[8];
@@ -586,6 +591,7 @@ public class CardGameDeck {
                 }
             }
             if (stat == 3) {
+                point[8] = 0;
                 if (action == 1 && c < 4) {
                     ++c;
                     return status[8];
@@ -847,6 +853,7 @@ public class CardGameDeck {
                 }
                 if (action == 2 && a > 0 && b > 0 && c > 1) {
                     status[11] = 4;
+                    point[11] = 4;
                     --a;
                     --b;
                     c = c - 2;

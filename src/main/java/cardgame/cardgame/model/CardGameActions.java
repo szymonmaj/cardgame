@@ -23,11 +23,11 @@ public class CardGameActions {
     private  Boolean disabledOption = false;
     private  Boolean finalDisabled = true;
     private  Boolean visibleDisabled = false;
-
     private  int countEnum = 0;
     private  int countNextEnum = 0;
     private int sumpoint = 0;
     private  Map <String, String> pictureHashMap = new HashMap<String, String>();
+    private String resultEnum3 = null;
 
     @NonNull
     public void result1(String val){
@@ -41,7 +41,7 @@ public class CardGameActions {
     }
     public String display(String val) {
         String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnum).show(cardGameDeck.getStatus()[countEnum]);
-        String resultEnum3 = null;
+
         if (val.equals("nazwa")) {
             resultEnum3 = resultEnum2[1];
         }
@@ -71,7 +71,7 @@ public class CardGameActions {
 
     public String displayNext(String val) {
         String[] resultEnum2 = CardGameDeckEnum.Deck.valueOf(valueEnumNext).show(cardGameDeck.getStatus()[countNextEnum]);
-        String resultEnum3 = null;
+
         if (val.equals("nazwa")) {
             resultEnum3 = resultEnum2[1];
         }
@@ -362,6 +362,10 @@ public class CardGameActions {
     }
 
     public  String getValueEnum() {
+        return valueEnum;
+    }
+
+    public  String getResultEnum3() {
         return valueEnum;
     }
 

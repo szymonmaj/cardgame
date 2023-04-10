@@ -62,11 +62,25 @@ img {
     </form>
     <span class="desc">Opcja 2: </span><span th:text="${cardGameActions.display('opcja2')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-        <input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/><br/>
+        <div th:switch="${cardGameActions.display('opcja2')}">
+            <p th:case="' '">
+                <input type="hidden" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/>
+            </p>
+            <p th:case="*">
+                <input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="Opcja 2" name="name"/><br/><br/>
+            </p>
+        </div>
     </form>
     <span class="desc">Opcja 3: </span><span th:text="${cardGameActions.display('opcja3')}"></span><br/><br/>
     <form action="#" th:action="@{/deck}" method="post" th:object="${cardGameActions}">
-        <input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/><br/><br/>
+        <div th:switch="${cardGameActions.display('opcja3')}">
+            <p th:case="' '">
+                <input type="hidden" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/>
+            </p>
+            <p th:case="*">
+                <input type="submit" class="btn-small" th:disabled="${cardGameActions.disabledOption}" value="Opcja 3" name="name"/><br/><br/><br/>
+            </p>
+        </div>
     </form>
     <button class="btn"><a href="/shuffle">Powrót</a></button>
     </div>
